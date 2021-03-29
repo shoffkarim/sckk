@@ -27,4 +27,3 @@ let catalogSlider = new Swiper('.catalog-slider', {
     swiper: thumbCatalogSlider
   }
 });
-
