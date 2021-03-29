@@ -13,10 +13,18 @@ let mainSlider = new Swiper('.main-slider', {
 });
 
 // eslint-disable-next-line no-unused-vars
+let thumbCatalogSlider = new Swiper('.catalog-thumb-slider', {
+  slidesPerView: 6,
+  freeMode: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+});
+
+// eslint-disable-next-line no-unused-vars
 let catalogSlider = new Swiper('.catalog-slider', {
   slidesPerView: 1,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+  thumbs: {
+    swiper: thumbCatalogSlider
+  }
 });
+

@@ -1,3 +1,99 @@
 .catalog-slider
   height: 100vh
   overflow-x: hidden
+  background-color: #00662C
+  &__container
+    position: relative
+  .slider-item
+    &:first-child
+      .slider-item__wrapper
+        &::before
+          display: none
+    &__container
+      padding-left: 117px
+      padding-top: 378px
+      text-transform: uppercase
+    &__href
+      font-size: 10px
+      line-height: 10px
+      font-weight: 700
+      color: #fff
+      display: inline
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+      position: relative
+      z-index: 11
+      transition: all 0.4s
+      &:hover
+        border-bottom: 1px solid rgba(255, 255, 255, 0)
+        transition: all 0.4s
+      &::after
+        content: ""
+        width: 38px
+        height: 29px
+        display: block
+        background-image: url(/app/build/img/btn-right.png)
+        background-repeat: no-repeat
+        background-size: cover
+        position: absolute
+        bottom: -55px
+        left: 0
+      span
+        font-size: 56px
+        line-height: 62px
+
+.catalog-thumb-slider
+  max-width: 1680px
+  margin: 0 auto 0 auto
+  padding-right: 80px
+  position: absolute
+  bottom: 0px
+  width: 100%
+  left: 0
+  right: 0
+
+.thumb
+  &-item
+    background-color: $lightGreen
+    height: auto
+    padding: 18px 30px
+    max-height: 76px
+    transition: all 0.4s
+    position: relative
+    &::before
+      content: ""
+      width: 1px
+      height: 32px
+      background-color: rgba(255, 255, 255, 0.4)
+      position: absolute
+      top: calc(50% - 16px)
+      left: 0
+    &:first-child
+      &::before
+        display: none
+    &__name
+      font-size: 15px
+      line-height: 20px
+      font-weight: 500
+      color: #fff
+      margin-left: 6px
+      max-width: 197px
+      min-width: 197px
+    &__number
+      font-size: 12px
+      line-height: 12px
+      font-weight: 500
+      color: #fff
+      margin-top: 3px
+      opacity: 0.7
+    &__wrapper
+      display: flex
+      flex-direction: row
+      align-items: flex-start
+.swiper-slide-thumb-active
+  background-color: #007B35
+  transition: all 0.4s
+  &::before
+    display: none
+.swiper-slide-thumb-active + .thumb-item
+  &::before
+    display: none
