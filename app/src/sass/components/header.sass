@@ -1,0 +1,33 @@
+.header
+  padding-top: 35px
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 10
+  width: 100%
+  .container
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+  &-menu
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    &__tel
+      margin-bottom: 10px
+      a
+        font-weight: 700
+  &-nav
+    &__list
+      display: flex
+      flex-direction: row
+      justify-content: flex-end
+    &__item
+      font-size: 15px
+      line-height: 22px
+      font-weight: 700
+      text-transform: uppercase
+      letter-spacing: 10%
+      margin-left: 20px
+      &::marker
+        font-size: 0px

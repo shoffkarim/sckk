@@ -10,7 +10,101 @@
     <title>Site</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body></body>
+  <body class="index">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <div class="logo-wrapper">
+          <img src="img/logo.png" alt="logo">
+        </div>
+        <div class="header-menu">
+          <div class="header-menu__tel">
+            <a>+7(30138)73-4-40</a>
+          </div>
+          <nav class="header-nav">
+            <ul class="header-nav__list">
+              <li class="header-nav__item"><a>О комбинате</a></li>
+              <li class="header-nav__item"><a>Каталог продукции</a></li>
+              <li class="header-nav__item"><a>Вакансии</a></li>
+              <li class="header-nav__item"><a>Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- /HEADER -->
+    <!-- БОКОВОЕ МЕНЮ -->
+    <aside class="right-menu right-fixed">
+      <div clas="right-menu__wrapper">
+        <div class="search-button">
+          <button>Поиск</button>
+        </div>
+        <div class="burger">
+          <button>Бургер</button>
+        </div>
+        <div class="language">
+          <a>Язык</a>
+        </div>
+      </div>
+    </aside>
+    <!-- /БОКОВОЕ МЕНЮ -->
+    <!-- Main -->
+    <main class="main">
+        <div class="main-slider">
+          <div class="swiper-wrapper">
+            <div class="slider-item swiper-slide">
+              <img class="slider-item__img" src="img/main-slider/1.png" alt="слайд">
+              <div class="slider-item__container">
+                <div class="slider-item__wrapper">
+                  <p class="slider-item__heading">Селенгинский целлюлозно-картонный комбинат</p>
+                  <p class="slider-item__text">Крупнейший производитель картона и гофропродукции в Восточной Сибири</p>
+                  <button class="transparent-btn js-open-video">Видео</button>
+                </div>
+                <a class="triangle-link js-open-callback">
+                  <span>Заказать<br>продукцию</span>
+                </a>
+              </div>
+            </div>
+            <div class="slider-item swiper-slide">
+              <img class="slider-item__img" src="img/main-slider/1.png" alt="слайд">
+              <div class="slider-item__container">
+                <div class="slider-item__wrapper">
+                  <p class="slider-item__heading">Селенгинский целлюлозно-картонный комбинат</p>
+                  <p class="slider-item__text">Крупнейший производитель картона и гофропродукции в Восточной Сибири</p>
+                  <button class="transparent-btn js-open-video">Видео</button>
+                </div>
+                <a class="triangle-link js-open-callback">
+                  <span>Заказать<br>продукцию</span>
+                </a>
+              </div>
+            </div>
+            <div class="slider-item swiper-slide">
+              <img class="slider-item__img" src="img/main-slider/1.png" alt="слайд">
+              <div class="slider-item__container">
+                <div class="slider-item__wrapper">
+                  <p class="slider-item__heading">Селенгинский целлюлозно-картонный комбинат</p>
+                  <p class="slider-item__text">Крупнейший производитель картона и гофропродукции в Восточной Сибири</p>
+                  <button class="transparent-btn js-open-video">Видео</button>
+                </div>
+                <a class="triangle-link js-open-callback">
+                  <span>Заказать<br>продукцию</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <!--  -->
+
+      <!-- <div>Крутите вниз</div> -->
+    </main>
+    <!-- /Main -->
+  </body>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </html>
