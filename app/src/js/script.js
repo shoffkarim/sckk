@@ -11,3 +11,12 @@ let mainSlider = new Swiper('.main-slider', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+// eslint-disable-next-line no-unused-vars
+let catalogSlider = new Swiper('.catalog-slider', {
+  slidesPerView: 1,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
