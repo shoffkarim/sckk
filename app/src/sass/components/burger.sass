@@ -6,16 +6,24 @@
     background-repeat: no-repeat
     background-size: 683px 592px
     background-position: bottom right
-    width: calc(100% - 80px)
+    width: 0px
     height: 100vh
     position: fixed
     top: 0
-    left: 0
+    right: 80px
     z-index: 100
+    visibility: hidden
+    transition: all 0.8s
+    &.js-open
+      width: calc(100% - 80px)
+      visibility: visible
+      transition: all 0.8s
     .container
       max-width: 1620px
       display: flex
       padding-right: 0px
+      opacity: 0
+      transition: all 0.1s
     .nav-list__item a
       font-size: 16px
     .transparent-btn
@@ -38,3 +46,7 @@
       line-height: 19px
       font-weight: 500
       color: #fff
+.js-open
+  .container
+    opacity: 1
+    transition: all 1.2s

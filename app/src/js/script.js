@@ -1,6 +1,10 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 // STYLES=============================================================================
 import '../sass/style.sass';
+import Burger from "./modules/burger";
+
+const burger = new Burger();
 
 // SWIPER
 // eslint-disable-next-line no-unused-vars
