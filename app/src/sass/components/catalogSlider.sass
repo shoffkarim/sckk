@@ -59,6 +59,7 @@
     max-height: 76px
     transition: all 0.4s
     position: relative
+    cursor: pointer
     &::before
       content: ""
       width: 1px
@@ -70,6 +71,10 @@
     &:first-child
       &::before
         display: none
+    &:hover
+      .thumb-item__name
+        color: rgba(255, 255, 255, 0.7)
+        transition: all 0.4s
     &__name
       font-size: 15px
       line-height: 20px

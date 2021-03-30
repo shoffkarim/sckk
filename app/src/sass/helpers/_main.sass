@@ -16,13 +16,38 @@ body
     border-bottom: 1px solid rgba(255, 255, 255, 0)
     transition: all 0.4s
 .transparent-btn
-  background-color: transparent
-  color: #fff
-  border: 1px solid #fff
-  font-size: 16px
-  line-height: 19px
-  font-weight: 500
-  padding: 16px 54px 14px 53px
+  position: relative
+  z-index: 1
+  display: inline-block
+  &::before
+    content: ""
+    display: block
+    width: 0px
+    height: 100%
+    background-color: $lightGreen
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 0
+    transition: all 0.5s
+  &:hover
+    &::before
+      width: 100%
+      transition: all 0.5s
+    button
+      border: 1px solid $lightGreen
+      transition: all 0.5s
+  button
+    background-color: transparent
+    color: #fff
+    border: 1px solid #fff
+    font-size: 16px
+    line-height: 19px
+    font-weight: 500
+    padding: 16px 54px 14px 53px
+    position: relative
+    z-index: 1
+    transition: all 0.5s
 .triangle-link
   position: relative
   font-size: 20px
@@ -71,6 +96,7 @@ body
       border-bottom: 1px solid rgba(0, 0, 0, 0.2)
       transition: all 0.4s
       &:hover
+        color: $green
         border-bottom: 1px solid rgba(0, 0, 0, 0)
         transition: all 0.4s
 
