@@ -1,0 +1,40 @@
+.burger
+  &-menu
+    padding-top: 84px
+    background-color: $darkGreen
+    background-image: url(/app/build/img/big-green-logo.png)
+    background-repeat: no-repeat
+    background-size: 683px 592px
+    background-position: bottom right
+    width: calc(100% - 80px)
+    height: 100vh
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 100
+    .container
+      max-width: 1620px
+      display: flex
+      padding-right: 0px
+    .nav-list__item a
+      font-size: 16px
+    .transparent-btn
+      padding: 16px 38px 14px 40px
+      display: block
+      margin-top: 17px
+      font-size: 15px
+    .social-links
+      margin-top: 40px
+  &-nav
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    max-height: 770px
+    width: 1230px
+  &-contacts
+    a
+      margin-bottom: 14px
+      font-size: 18px
+      line-height: 19px
+      font-weight: 500
+      color: #fff
