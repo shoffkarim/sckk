@@ -6,3 +6,107 @@
   width: 80px
   background-color: $green
   z-index: 10
+  &__wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    height: 100%
+    padding-top: 25px
+    padding-bottom: 35px
+.search-button
+  .background
+    fill: $green
+    transition: all 0.4s
+  &:hover
+    .background
+      fill: #00983D
+      transition: all 0.4s
+.burger
+  button
+    padding-top: 8px
+    padding-bottom: 8px
+    position: relative
+    span
+      width: 30px
+      height: 1px
+      background-color: #fff
+      display: block
+      &::before, &::after
+        content: ""
+        width: 30px
+        height: 1px
+        background-color: #fff
+        display: block
+        position: absolute
+        transition: all 0.4s
+      &::before
+        top: 0px
+        left: 0px
+      &::after
+        width: 15px
+        bottom: 0px
+        right: 0px
+  &:hover
+    span
+      &::after
+        width: 30px
+        transition: all 0.4s
+.language
+  position: relative
+  &-list
+    width: 64px
+    position: absolute
+    top: -115px
+    left: calc(50% - 32px)
+    background-color: $lightGreen
+    padding: 6px 0px
+    opacity: 0
+    visibility: hidden
+    transition: all 0.4s
+    &:hover
+      opacity: 1
+      visibility: visible
+      transition: all 0.4s
+    &::after
+      content: ""
+      display: block
+      width: 11px
+      height: 11px
+      background-color: $lightGreen
+      position: absolute
+      bottom: -5.5px
+      left: calc(50% - 5.5px)
+      transform: rotate(45deg)
+    .language-item
+      padding: 7px 10px
+      background-color: rgba(255, 255, 255, 0)
+      transition: all 0.4s
+      &:hover
+        background-color: rgba(255, 255, 255, 0.2)
+        transition: all 0.4s
+  &-item
+    display: flex
+    flex-direction: row
+    align-items: center
+    cursor: pointer
+  &-name
+    font-size: 14px
+    line-height: 14px
+    font-weight: 400
+    color: #fff
+    margin-left: 4px
+    white-space: pre
+  &-img
+    width: 14px
+    height: 14px
+    img
+      border-radius: 50%
+  &-active
+    &:hover
+      + .language-list
+        opacity: 1
+        visibility: visible
+        transition: all 0.4s
+    span
+      border-bottom: 1px dotted rgba(255, 255, 255, 0.3)

@@ -41,15 +41,48 @@
   <!-- /HEADER -->
   <!-- БОКОВОЕ МЕНЮ -->
   <aside class="right-menu right-fixed">
-    <div clas="right-menu__wrapper">
+    <div class="right-menu__wrapper">
       <div class="search-button">
-        <button>Поиск</button>
+        <button>
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="20" class="background" fill="#00983D"/>
+            <circle cx="18.2215" cy="18.1082" r="6.72149" stroke="white"/>
+            <path d="M23.0313 23.4219L28.0471 28.472" stroke="white"/>
+          </svg>
+        </button>
       </div>
       <div class="burger">
-        <button>Бургер</button>
+        <button class="js-burger">
+          <span></span>
+        </button>
       </div>
       <div class="language">
-        <a>Язык</a>
+        <div class="language-active language-item">
+          <div class="language-img">
+            <img src="img/flags/rus.png" alt="">
+          </div>
+          <span class="language-name">Рус</span>
+        </div>
+        <ul class="language-list">
+          <li class="language-item">
+            <div class="language-img">
+              <img src="img/flags/rus.png" alt="">
+            </div>
+            <span class="language-name">Рус</span>
+          </li>
+          <li class="language-item">
+            <div class="language-img">
+              <img src="img/flags/eng.png" alt="">
+            </div>
+            <span class="language-name">Eng</span>
+          </li>
+          <li class="language-item">
+            <div class="language-img">
+              <img src="img/flags/ch.png" alt="">
+            </div>
+            <span class="language-name">中国</span>
+          </li>
+        </ul>
       </div>
     </div>
   </aside>
@@ -100,6 +133,7 @@
       </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
+      <div class="pointer-down">Крутите вниз</div>
     </section>
     <!-- CATALOG SLIDER -->
     <section class="catalog-slider__container">
