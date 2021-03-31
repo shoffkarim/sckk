@@ -9,6 +9,8 @@
     display: flex
     flex-direction: row
     justify-content: flex-end
+    @media screen and ( max-width: 767px )
+      align-items: center
   &-menu
     display: flex
     flex-direction: column
@@ -19,16 +21,23 @@
         font-weight: 700
         font-size: 15px
         color: #fff
-
+        @media screen and ( max-width: 1366px )
+          font-size: 13px
+          line-height: 16px
+          font-weight: 600
+      @media screen and ( max-width: 767px )
+        margin-bottom: 5px
+        margin-right: 5px
+      @media screen and ( max-width: 500px )
+        display: none
   &-nav
+    @media screen and ( max-width: 1000px )
+      display: none
     &__list
       display: flex
       flex-direction: row
       justify-content: flex-end
     &__item
-      font-size: 15px
-      line-height: 22px
-      font-weight: 700
       text-transform: uppercase
       letter-spacing: 1px
       margin-left: 25px
@@ -38,6 +47,13 @@
         position: relative
         cursor: pointer
         padding-bottom: 3px
+        font-size: 15px
+        line-height: 22px
+        font-weight: 700
+        @media screen and ( max-width: 1366px )
+          font-size: 13px
+          line-height: 22px
+          font-weight: 600
         &::after
           content: ""
           background: linear-gradient(90deg,#fff 100%,#fff 0)
@@ -51,3 +67,13 @@
           &::after
             width: 100%
             transition: all 0.5s
+  &-mobile
+    display: none
+    .search-button .background
+      fill: none
+    @media screen and ( max-width: 767px )
+      display: flex
+      align-items: center
+      .burger
+        margin-bottom: 10px
+        margin-left: 5px

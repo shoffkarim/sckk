@@ -4,6 +4,23 @@ body
   max-width: 1680px
   margin: 0 auto 0 auto
   padding-right: 80px
+  @media screen and ( max-width: 1760px )
+    padding-right: 140px
+  @media screen and ( max-width: 1670px )
+    padding-right: 80px
+    max-width: 1500px
+  @media screen and ( max-width: 1560px )
+    max-width: 100%
+    width: 100%
+    padding-right: 120px
+    padding-left: 40px
+    margin-right: 0px
+    margin-left: 0px
+  @media screen and ( max-width: 767px )
+    padding-right: 40px
+  @media screen and ( max-width: 450px )
+    padding-left: 20px
+    padding-right: 20px
 .btn-link
   margin-bottom: 14px
   font-size: 17px
@@ -49,6 +66,9 @@ body
     position: relative
     z-index: 1
     transition: all 0.5s
+    @media screen and ( max-width: 500px )
+      font-size: 14px
+      line-height: 16px
 .triangle-link
   position: relative
   font-size: 20px
@@ -60,12 +80,18 @@ body
   align-items: center
   justify-content: center
   text-align: center
+  @media screen and ( max-width: 1560px )
+    font-size: 16px
+    line-height: 19px
   svg
     position: absolute
     top: -13px
     right: 0
     fill: transparent
     transition: all 0.4s
+    @media screen and ( max-width: 1560px )
+      width: 253px
+      height: 279px
     path
       stroke: #fff
       transition: all 0.4s
@@ -74,6 +100,10 @@ body
     margin-right: 45px
     position: relative
     z-index: 1
+    @media screen and ( max-width: 1560px )
+      margin-right: 35px
+    @media screen and ( max-width: 1200px )
+      margin-bottom: 128px
   &:hover
     svg
       fill: $lightGreen
@@ -85,6 +115,19 @@ body
   position: fixed
   top: 36px
   left: 120px
+  @media screen and ( max-width: 1760px )
+    left: 40px
+  @media screen and ( max-width: 767px )
+    max-width: 200px
+    position: relative
+    top: auto
+    left: auto
+    margin-right: auto
+    img
+      width: 100%
+  @media screen and ( max-width: 600px )
+    max-width: 150px
+
 
 .section
   &-heading
@@ -92,11 +135,18 @@ body
     line-height: 48px
     font-weight: 700
     color: #000
+    @media screen and ( max-width: 1366px )
+      font-size: 38px
+      line-height: 44px
+    @media screen and ( max-width: 500px )
+      font-size: 28px
+      line-height: 33px
   &-top
     display: flex
     flex-direction: row
     justify-content: space-between
     align-items: baseline
+    flex-wrap: wrap
     &__href
       font-size: 18px
       line-height: 22px
@@ -104,6 +154,9 @@ body
       color: #000
       border-bottom: 1px solid rgba(0, 0, 0, 0.2)
       transition: all 0.4s
+      @media screen and ( max-width: 1560px )
+        font-size: 16px
+        line-height: 19px
       &:hover
         color: $green
         border-bottom: 1px solid rgba(0, 0, 0, 0)
@@ -129,4 +182,13 @@ body
     position: absolute
     top: 14px
     left: 0px
+  @media screen and ( max-width: 1560px )
+    font-size: 16px
+    line-height: 17px
+    bottom: 60px
+    left: -26px
+    &::before
+      top: 8px
+  @media screen and ( max-width: 1000px )
+    display: none
 

@@ -1,6 +1,9 @@
 .advantages
   height: 100vh
   position: relative
+  @media screen and ( max-width: 500px )
+    min-height: 400px
+    height: 100%
   &__img
     position: absolute
     top: 0
@@ -13,6 +16,14 @@
     position: relative
     z-index: 1
     padding-top: 317px
+    @media screen and ( max-width: 1560px )
+      padding-top: 206px
+      padding-right: 80px
+    @media screen and ( max-width: 767px )
+      padding-right: 0px
+    @media screen and ( max-width: 500px )
+      padding-top: 100px
+
   &__href
     font-size: 100px
     line-height: 92px
@@ -23,6 +34,18 @@
     flex-direction: column
     align-items: center
     justify-content: center
+    @media screen and ( max-width: 1200px )
+      font-size: 70px
+      line-height: 70px
+    @media screen and ( max-width: 1000px )
+      padding-right: 80px
+    @media screen and ( max-width: 767px )
+      font-size: 50px
+      line-height: 50px
+      padding-right: 0px
+    @media screen and ( max-width: 500px )
+      font-size: 32px
+      line-height: 32px
   &-tabs
     max-width: 1680px
     width: 100%
@@ -34,12 +57,26 @@
     right: 0
     z-index: 1
     display: flex
+    flex-wrap: wrap
+    @media screen and ( max-width: 1760px )
+      max-width: 100%
+      width: 100%
+      padding-right: 120px
+      padding-left: 40px
+      margin-right: 0px
+      margin-left: 0px
+    @media screen and ( max-width: 767px )
+      padding-right: 40px
+    @media screen and ( max-width: 500px )
+      padding-right: 20px
+      padding-left: 20px
   &-item
     width: 25%
     background-color: $lightGreen
     position: relative
     text-align: center
     transition: all 0.4s
+
     &::before
       content: ""
       width: 1px
@@ -51,6 +88,7 @@
     &:first-child
       &::before
         display: none
+
     &:hover
       background-color: #007B35
       transition: all 0.4s
@@ -67,6 +105,9 @@
       font-weight: 500
       color: #fff
       margin-left: 9px
+      @media screen and ( max-width: 767px )
+        font-size: 13px
+        line-height: 18px
     &__number
       font-size: 12px
       line-height: 12px
@@ -74,5 +115,10 @@
       color: #fff
       margin-top: 3px
       opacity: 0.4
+    @media screen and ( max-width: 767px )
+      width: 50%
+      &:nth-child(3n)
+        &::before
+          display: none
 .advantages-tabs__item:hover + .advantages-tabs__item::before
   display: none

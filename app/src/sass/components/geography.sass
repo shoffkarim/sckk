@@ -2,18 +2,34 @@
   background-color: #fff
   padding-top: 144px
   padding-bottom: 56px
+  @media screen and ( max-width: 900px )
+    padding-top: 70px
   &-container
     display: flex
     flex-direction: row
+    flex-wrap: wrap
+    @media screen and ( max-width: 1560px )
+      justify-content: space-between
   &-wrapper
     max-width: 710px
+    @media screen and ( max-width: 1560px )
+      max-width: 640px
   &-heading
     margin-bottom: 33px
+    @media screen and ( max-width: 1560px )
+      margin-bottom: 10px
   &-text
     font-size: 18px
     line-height: 26px
     font-weight: 400
     color: #000
+    @media screen and ( max-width: 1560px )
+      font-size: 16px
+      line-height: 24px
+      max-width: 495px
+    @media screen and ( max-width: 500px )
+      font-size: 14px
+      line-height: 18px
   &-map-points
     display: flex
     flex-direction: row
@@ -22,6 +38,11 @@
     margin-left: 110px
     margin-top: 5px
     width: 100%
+    @media screen and ( max-width: 1560px )
+      margin-left: 0px
+      margin-top: 5px
+    @media screen and ( max-width: 767px )
+      display: none
     &__items
       display: flex
       flex-direction: row
@@ -35,5 +56,13 @@
         color: #000
         max-width: 199px
         margin-left: 21px
+        @media screen and ( max-width: 1560px )
+          font-size: 16px
+          line-height: 24px
   &-map
     text-align: center
+    width: 100%
+    @media screen and ( max-width: 767px )
+      display: none
+    img
+      width: 100%

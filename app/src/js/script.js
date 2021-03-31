@@ -22,6 +22,14 @@ let thumbCatalogSlider = new Swiper('.catalog-thumb-slider', {
   freeMode: true,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+    },
+    1000: {
+      slidesPerView: 6,
+    }
+  }
 });
 
 // eslint-disable-next-line no-unused-vars

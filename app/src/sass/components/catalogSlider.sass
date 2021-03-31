@@ -2,8 +2,12 @@
   height: 100vh
   overflow-x: hidden
   background-color: #00662C
+  @media screen and ( max-width: 500px )
+    min-height: 400px
+    height: 100%
   &__container
     position: relative
+    overflow-x: hidden
   .slider-item
     &:first-child
       .slider-item__wrapper
@@ -16,10 +20,25 @@
         right: 100px
         z-index: 10
         transform: rotate(180deg)
+        @media screen and ( max-width: 500px )
+          width: 70px
+          height: 83px
+          top: -35px
     &__container
       padding-left: 117px
       padding-top: 378px
       text-transform: uppercase
+      @media screen and ( max-width: 1560px )
+        padding-left: 40px
+        padding-top: 300px
+      @media screen and ( max-width: 767px )
+        padding-top: 200px
+        padding-bottom: 200px
+      @media screen and ( max-width: 500px )
+        padding-top: 150px
+        padding-bottom: 150px
+      @media screen and ( max-width: 450px )
+        padding-left: 20px
     &__href
       font-size: 10px
       line-height: 10px
@@ -52,6 +71,19 @@
       span
         font-size: 56px
         line-height: 62px
+        @media screen and ( max-width: 1560px )
+          font-size: 46px
+          line-height: 52px
+          font-weight: 600
+        @media screen and ( max-width: 767px )
+          font-size: 35px
+          line-height: 45px
+        @media screen and ( max-width: 500px )
+          font-size: 20px
+          line-height: 25px
+    @media screen and ( max-width: 500px )
+      &__img
+        height: 400px
 
 .catalog-thumb-slider
   max-width: 1680px
@@ -62,7 +94,16 @@
   width: 100%
   left: 0
   right: 0
-
+  @media screen and ( max-width: 1760px )
+    max-width: 100%
+    width: 100%
+    padding-right: 120px
+    padding-left: 40px
+    margin-right: 0px
+    margin-left: 0px
+  @media screen and ( max-width: 1000px )
+    padding-right: 0px
+    padding-left: 0px
 .thumb
   &-item
     background-color: $lightGreen
@@ -72,6 +113,8 @@
     transition: all 0.4s
     position: relative
     cursor: pointer
+    @media screen and ( max-width: 1000px )
+      width: auto !important
     &::before
       content: ""
       width: 1px
@@ -95,6 +138,12 @@
       margin-left: 6px
       max-width: 197px
       min-width: 197px
+      // @media screen and ( max-width: 1560px )
+      //   max-width: 165px
+      //   min-width: 165px
+      // @media screen and ( max-width: 1200px )
+      //   max-width: none
+      //   min-width: auto
     &__number
       font-size: 12px
       line-height: 12px
