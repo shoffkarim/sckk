@@ -69,8 +69,19 @@
   left: auto
   top: auto
   bottom: 40px
+  opacity: 1
+  &:hover
+    opacity: 0.4
+    transition: all 0.4s
 .swiper-button-prev, .swiper-container-rtl .swiper-button-next
   right: 253px
   left: auto
   top: auto
   bottom: 40px
+  opacity: 1
+  &:hover
+    opacity: 0.4
+    transition: all 0.4s
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled
+  opacity: 0.4
+  transition: all 0.4s

@@ -53,6 +53,19 @@
       &::after
         width: 30px
         transition: all 0.4s
+  .close
+    span
+      background-color: transparent
+      &::before, &::after
+        background-color: #fff
+      &::after
+        width: 30px
+        top: 0px
+        transform: rotate(45deg)
+        transition: all 0.4s
+      &::before
+        transform: rotate(-45deg)
+        transition: all 0.4s
 .language
   position: relative
   &-list
