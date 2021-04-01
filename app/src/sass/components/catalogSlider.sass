@@ -68,6 +68,8 @@
         left: 0
         opacity: 1
         transition: all 0.4s
+        @media screen and (max-width: 1200px)
+          display: none
       span
         font-size: 56px
         line-height: 62px
@@ -101,9 +103,8 @@
     padding-left: 40px
     margin-right: 0px
     margin-left: 0px
-  @media screen and ( max-width: 1000px )
-    padding-right: 0px
-    padding-left: 0px
+  @media screen and ( max-width: 1200px )
+    display: none
 .thumb
   &-item
     background-color: $lightGreen
@@ -113,6 +114,10 @@
     transition: all 0.4s
     position: relative
     cursor: pointer
+    @media screen and ( max-width: 1710px )
+      padding: 18px 9px
+    @media screen and ( max-width: 1250px )
+      padding: 12px 9px
     @media screen and ( max-width: 1000px )
       width: auto !important
     &::before
@@ -138,12 +143,12 @@
       margin-left: 6px
       max-width: 197px
       min-width: 197px
-      // @media screen and ( max-width: 1560px )
-      //   max-width: 165px
-      //   min-width: 165px
-      // @media screen and ( max-width: 1200px )
-      //   max-width: none
-      //   min-width: auto
+      @media screen and ( max-width: 1710px )
+        font-size: 12px
+        line-height: 16px
+        min-width: auto
+      @media screen and ( max-width: 1250px )
+        line-height: 14px
     &__number
       font-size: 12px
       line-height: 12px
@@ -163,3 +168,7 @@
 .swiper-slide-thumb-active + .thumb-item
   &::before
     display: none
+.catalog-button-next, .catalog-button-prev
+  display: none
+  @media screen and (max-width: 1200px)
+    display: flex

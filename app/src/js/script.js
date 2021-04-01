@@ -11,8 +11,8 @@ const burger = new Burger();
 let mainSlider = new Swiper('.main-slider', {
   slidesPerView: 1,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.main-button-next',
+    prevEl: '.main-button-prev',
   },
 });
 
@@ -37,5 +37,9 @@ let catalogSlider = new Swiper('.catalog-slider', {
   slidesPerView: 1,
   thumbs: {
     swiper: thumbCatalogSlider
-  }
+  },
+  navigation: {
+    nextEl: '.catalog-button-next',
+    prevEl: '.catalog-button-prev',
+  },
 });
