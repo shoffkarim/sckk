@@ -1,0 +1,85 @@
+.form
+  &-block
+    width: 100%
+    @media screen and (max-width: 650px)
+      margin-bottom: 23px
+    &__label
+      font-size: 12px
+      line-height: 22px
+      font-weight: 700
+      letter-spacing: 1px
+      color: #000
+      text-transform: uppercase
+      margin-bottom: 9px
+      display: block
+    &__input
+      font-size: 18px
+      line-height: 24px
+      font-weight: 400
+      color: #000
+      padding: 13px 18px 12px
+      border: 1px solid rgba(196, 196, 196, 1)
+      width: 100%
+    .star
+      color: $green
+  &-submit
+    button
+      font-size: 16px
+      line-height: 19px
+      font-weight: 400
+      color: #fff
+      background-color: $green
+      padding: 16px 40px 15px
+      transition: all 0.4s
+      &:hover
+        background-color: $lightGreen
+        transition: all 0.4s
+
+
+.fake-checkbox
+  &__text
+    font-size: 13px
+    line-height: 24px
+    font-weight: 400
+    color: #000
+    margin-left: 11px
+    a
+      color: $green
+      border-bottom: 1px solid rgba(0,123,53,0.2)
+      transition: all 0.4s
+      &:hover
+        border-bottom: 1px solid rgba(0,123,53,0)
+        transition: all 0.4s
+  &__box
+    display: block
+    width: 24px
+    min-width: 24px
+    max-width: 24px
+    height: 24px
+    min-height: 24px
+    max-height: 24px
+    border: 1px solid rgba(0, 123, 53, 1)
+    background-color: #fff
+    transition: all 0.4s
+    position: relative
+    &::before
+      content: ""
+      width: 15px
+      height: 11px
+      display: block
+      background-image: url(/app/build/img/checkbox-arrow.svg)
+      background-repeat: no-repeat
+      background-size: cover
+      position: absolute
+      top: 4px
+      left: 4px
+  label
+    display: flex
+    align-items: center
+    margin-top: 13px
+  input
+    display: none
+    &:checked
+      + .fake-checkbox__box
+        background-color: $green
+        transition: all 0.4s
