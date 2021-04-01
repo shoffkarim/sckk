@@ -3,9 +3,12 @@
 // STYLES=============================================================================
 import '../sass/style.sass';
 import Burger from "./modules/burger";
+import Popup from "./modules/popup";
+import Validation from "./modules/validation";
 
 const burger = new Burger();
-
+const popup = new Popup();
+const validation = new Validation();
 // SWIPER
 // eslint-disable-next-line no-unused-vars
 let mainSlider = new Swiper('.main-slider', {

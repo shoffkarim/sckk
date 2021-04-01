@@ -117,7 +117,7 @@
                 <button class="js-open-video">Видео</button>
               </div>
             </div>
-            <a class="triangle-link js-open-callback" href="fake">
+            <a class="triangle-link js-open-popup" data-popup="order" href="fake">
               <svg width="295" height="325" viewBox="0 0 295 325" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M294.5 324.155V0.847626L1.03629 163.042L294.5 324.155Z" stroke="white"/>
               </svg>
@@ -135,7 +135,7 @@
                 <button class="js-open-video">Видео</button>
               </div>
             </div>
-            <a class="triangle-link js-open-callback" href="fake">
+            <a class="triangle-link js-open-popup" data-popup="order" href="fake">
               <svg width="295" height="325" viewBox="0 0 295 325" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M294.5 324.155V0.847626L1.03629 163.042L294.5 324.155Z" stroke="white"/>
               </svg>
@@ -153,7 +153,7 @@
                 <button class="js-open-video">Видео</button>
               </div>
             </div>
-            <a class="triangle-link js-open-callback" href="fake">
+            <a class="triangle-link js-open-popup" data-popup="order" href="fake">
               <svg width="295" height="325" viewBox="0 0 295 325" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M294.5 324.155V0.847626L1.03629 163.042L294.5 324.155Z" stroke="white"/>
               </svg>
@@ -627,7 +627,7 @@
         </div>
         <div class="footer-bottom__contacts">
           <a href="tel:fake">+7 (30138) 73-4-40</a>
-          <button class="btn-link js-open-callback">Связаться с нами</button>
+          <button class="btn-link js-open-popup" data-popup="callback">Связаться с нами</button>
         </div>
         <div class="footer-bottom__links">
           <p>Мы в социальных сетях</p>
@@ -839,7 +839,7 @@
       <div class="burger-contacts">
         <a href="tel:fake">+7 (30138) 73-4-40</a>
         <div class="transparent-btn">
-          <button class="js-open-callback">Связаться с нами</button>
+          <button class="js-open-popup" data-popup="callback">Связаться с нами</button>
         </div>
         <div class="social-links">
           <a href="fake">
@@ -880,7 +880,7 @@
   <!-- /FOOTER -->
 
   <!-- POPUP ORDER -->
-  <div class="popup popup-order">
+  <div class="popup popup-order" data-popup="order" >
     <div class="popup-container">
       <div class="popup-wrapper">
         <p class="popup-title">Заказать</p>
@@ -891,29 +891,29 @@
         <div class="popup-form__wrapper">
           <div class="popup-form__block form-block">
             <label class="form-block__label">Ваше имя<span class="star">*</span></label>
-            <input class="form-block__input" type="text"></input>
+            <input class="form-block__input js-valid" data-req="true" type="text"></input>
           </div>
         </div>
         <div class="popup-form__wrapper">
           <div class="popup-form__block form-block">
             <label class="form-block__label">Телефон<span class="star">*</span></label>
-            <input class="form-block__input" type="tel"></input>
+            <input class="form-block__input js-valid" data-req="true" type="tel"></input>
           </div>
           <div class="popup-form__block form-block">
             <label class="form-block__label">E-MAIL<span class="star">*</span></label>
-            <input class="form-block__input" type="email"></input>
+            <input class="form-block__input js-valid" data-req="true" type="email"></input>
           </div>
         </div>
         <div class="popup-form__bottom">
           <div class="fake-checkbox">
-            <label for="checkbox">
-              <input class="fake-checkbox__box" id="checkbox" type="checkbox"></input>
+            <label for="checkbox-order">
+              <input class="fake-checkbox__input js-valid" id="checkbox-order" type="checkbox" data-req="true"></input>
               <div class="fake-checkbox__box"></div>
               <p class="fake-checkbox__text">Даю согласие на обработку <a href="fake">персональных данных</a></p>
             </label>
           </div>
           <div class="popup-form__button form-submit">
-            <button type="submit">Отправить</button>
+            <button class="js-submit" type="submit">Отправить</button>
           </div>
         </div>
       </form>
@@ -927,7 +927,54 @@
     </div>
   </div>
 
-  <!-- /POPUP ORDER -->
+  <!-- /POPUP CALLBACK -->
+
+
+  <div class="popup popup-callback" data-popup="callback" >
+    <div class="popup-container">
+      <div class="popup-wrapper">
+        <p class="popup-title">Связаться с нами</p>
+        <p class="popup-text">Заполните поля ниже и наши менеджеры свяжутся с вами в самое ближайшее время.</p>
+      </div>
+      <form class="popup-form">
+        <div class="popup-form__wrapper">
+          <div class="popup-form__block form-block">
+            <label class="form-block__label">Ваше имя</label>
+            <input class="form-block__input" type="text"></input>
+          </div>
+        </div>
+        <div class="popup-form__wrapper">
+          <div class="popup-form__block form-block">
+            <label class="form-block__label">Телефон</label>
+            <input class="form-block__input" type="tel"></input>
+          </div>
+        </div>
+        <div class="popup-form__bottom">
+          <div class="fake-checkbox">
+            <label for="checkbox-callback">
+              <input class="fake-checkbox__box js-valid" id="checkbox-callback" type="checkbox" data-req="true"></input>
+              <div class="fake-checkbox__box"></div>
+              <p class="fake-checkbox__text">Даю согласие на обработку <a href="fake">персональных данных</a></p>
+            </label>
+          </div>
+          <div class="popup-form__button form-submit ">
+            <button class="js-submit" type="submit">Связаться с нами</button>
+          </div>
+        </div>
+      </form>
+      <button class="popup-close popup-close__mobile js-popup-close">
+        <span></span>
+      </button>
+    </div>
+    <button class="popup-close js-popup-close">
+      <span></span>
+    </button>
+    </div>
+  </div>
+
+  <!-- /POPUP CALLBACK -->
+
+
 </body>
 <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> -->
 <script src="js/swiper.min.js"></script>

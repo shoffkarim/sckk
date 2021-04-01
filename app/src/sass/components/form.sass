@@ -20,8 +20,13 @@
       padding: 13px 18px 12px
       border: 1px solid rgba(196, 196, 196, 1)
       width: 100%
+      transition: all 0.4s
+      &.error
+        border: 1px solid red
+        transition: all 0.4s
     .star
       color: $green
+
   &-submit
     button
       font-size: 16px
@@ -83,3 +88,7 @@
       + .fake-checkbox__box
         background-color: $green
         transition: all 0.4s
+.error
+  + .fake-checkbox__box
+    border: 1px solid red
+    transition: all 0.4s
