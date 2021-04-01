@@ -12,6 +12,7 @@ class Burger {
     burgerBtns.forEach((i) => i.addEventListener("click", function (e) {
       e.preventDefault();
       i.classList.toggle("close");
+      document.body.classList.toggle("no-overflow");
       burgerMenu.classList.toggle("js-open");
     }));
 
