@@ -38,7 +38,7 @@
       </div>
       <div class="header-mobile">
         <div class="search-button">
-          <button>
+          <button class="js-open-popup" data-popup="search">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="20" cy="20" r="20" class="background" fill="#00983D"/>
               <circle cx="18.2215" cy="18.1082" r="6.72149" stroke="white"/>
@@ -59,7 +59,7 @@
   <aside class="right-menu right-fixed">
     <div class="right-menu__wrapper">
       <div class="search-button">
-        <button>
+        <button class="js-open-popup" data-popup="search">
           <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="20" cy="20" r="20" class="background" fill="#00983D"/>
             <circle cx="18.2215" cy="18.1082" r="6.72149" stroke="white"/>
@@ -973,7 +973,46 @@
   </div>
 
   <!-- /POPUP CALLBACK -->
+  <!-- POPUP THANKS -->
+  <div class="popup popup-thanks">
+    <div class="popup-container">
+      <div class="popup-wrapper">
+        <p class="popup-title">Спасибо!</p>
+        <p class="popup-text">Ваша заявка успешно отправлена. </p>
+      </div>
+      <button class="popup-close__thanks js-popup-close">
+        Закрыть
+      </button>
+    </div>
+  </div>
+  <!-- /POPUP THANKS -->
 
+  <!-- POPUP SEARCH -->
+
+  <div class="popup popup-search" data-popup="search">
+    <div class="popup-container">
+      <form class="form-search">
+        <input class="form-block__input" type="text" placeholder="Что вы ищите?"></input>
+        <div class="form-search__button">
+          <button type="submit">
+            Найти
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18.2215" cy="18.1082" r="6.72149" stroke="white"/>
+              <path d="M23.0313 23.4219L28.0471 28.472" stroke="white"/>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+    <button class="popup-close popup-close__mobile js-popup-close">
+      <span></span>
+    </button>
+    <button class="popup-close js-popup-close">
+      <span></span>
+    </button>
+  </div>
+
+  <!-- /POPUP SEARCH -->
 
 </body>
 <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> -->

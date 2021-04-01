@@ -39,7 +39,55 @@
       &:hover
         background-color: $lightGreen
         transition: all 0.4s
-
+  &-search
+    display: flex
+    flex-direction: row
+    @media screen and (max-width: 500px)
+      flex-direction: column
+    &__button
+      margin-left: 10px
+      @media screen and (max-width: 500px)
+        margin-left: 0px
+        margin-top: 20px
+      button
+        position: relative
+        display: block
+        border: 1px solid rgba(255, 255, 255, 1)
+        color: #fff
+        font-size: 16px
+        line-height: 19px
+        font-weight: 500
+        background-color: $darkGreen
+        padding: 16px 68px 13px 40px
+        transition: all 0.4s
+      svg
+        position: absolute
+        top: 5px
+        right: 28px
+        path,circle
+          stroke: #fff
+          transition: all 0.4s
+      &:hover
+        button
+          background-color: #fff
+          color: $darkGreen
+          transition: all 0.4s
+        path,circle
+          stroke: $darkGreen
+          transition: all 0.4s
+.popup-close__thanks
+  font-size: 16px
+  line-height: 19px
+  font-weight: 400
+  color: #fff
+  background-color: $green
+  padding: 16px 40px 15px
+  display: block
+  margin: 20px auto 0px
+  transition: all 0.4s
+  &:hover
+    background-color: $lightGreen
+    transition: all 0.4s
 
 .fake-checkbox
   &__text
