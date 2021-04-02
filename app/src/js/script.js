@@ -6,11 +6,13 @@ import Burger from "./modules/burger";
 import Popup from "./modules/popup";
 import Validation from "./modules/validation";
 import InputMask from "./modules/inputMask";
+import Cookie from "./modules/cookie";
 
 const burger = new Burger();
 const popup = new Popup();
 const validation = new Validation();
 const mask = new InputMask();
+const cookie = new Cookie();
 
 // SWIPER
 // eslint-disable-next-line no-unused-vars
@@ -20,6 +22,10 @@ let mainSlider = new Swiper('.main-slider', {
     nextEl: '.main-button-next',
     prevEl: '.main-button-prev',
   },
+  autoplay: {
+    delay: 5000,
+  },
+  speed: 600,
 });
 
 // eslint-disable-next-line no-unused-vars
@@ -45,6 +51,10 @@ let catalogSlider = new Swiper('.catalog-slider', {
   thumbs: {
     swiper: thumbCatalogSlider
   },
+  autoplay: {
+    delay: 5000,
+  },
+  speed: 600,
   navigation: {
     nextEl: '.catalog-button-next',
     prevEl: '.catalog-button-prev',
