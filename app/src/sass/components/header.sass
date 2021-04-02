@@ -1,8 +1,5 @@
 .header
   padding-top: 35px
-  position: absolute
-  top: 0
-  left: 0
   z-index: 10
   width: 100%
   .container
@@ -20,7 +17,7 @@
       a
         font-weight: 700
         font-size: 15px
-        color: #fff
+        color: #000
         @media screen and ( max-width: 1366px )
           font-size: 13px
           line-height: 16px
@@ -50,13 +47,14 @@
         font-size: 15px
         line-height: 22px
         font-weight: 700
+        color: #000
         @media screen and ( max-width: 1366px )
           font-size: 13px
           line-height: 22px
           font-weight: 600
         &::after
           content: ""
-          background: linear-gradient(90deg,#fff 100%,#fff 0)
+          background: linear-gradient(90deg,#000 100%,#000 0)
           width: 0
           height: 1px
           position: absolute
@@ -69,11 +67,38 @@
             transition: all 0.5s
   &-mobile
     display: none
-    .search-button .background
-      fill: none
+    .search-button
+      .background
+        fill: none
+        stroke: none
+      circle, path
+        stroke: #000
+    .burger button span, .burger button span:after, .burger button span:before
+      background-color: #000
     @media screen and ( max-width: 767px )
       display: flex
       align-items: center
       .burger
         margin-bottom: 10px
         margin-left: 5px
+.index
+  .header
+    position: absolute
+    top: 0
+    left: 0
+  .header-menu__tel
+    a
+      color: #fff
+  .header-nav__item
+    a
+      color: #fff
+      &::after
+        content: ""
+        background: linear-gradient(90deg,#fff 100%,#fff 0)
+  .header-mobile
+    .search-button
+      .background
+        fill: none
+        stroke: none
+      circle, path
+        stroke: #fff

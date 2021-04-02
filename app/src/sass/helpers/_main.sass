@@ -111,17 +111,15 @@ body
       path
         stroke: transparent
         transition: all 0.4s
+.index
+  .logo-wrapper
+    svg
+      path
+        fill: #fff
 .logo-wrapper
-  position: fixed
-  top: 36px
-  left: 120px
-  @media screen and ( max-width: 1760px )
-    left: 40px
+  margin-right: auto
   @media screen and ( max-width: 767px )
     max-width: 200px
-    position: relative
-    top: auto
-    left: auto
     margin-right: auto
     svg
       width: 100%
@@ -131,7 +129,19 @@ body
     svg
       path
         fill: $green
-
+  svg
+      path
+        fill: $green
+  &.logo-fixed
+    position: fixed
+    top: 36px
+    left: 120px
+    @media screen and ( max-width: 767px )
+      max-width: 200px
+      position: relative
+      top: auto
+      left: auto
+      margin-right: auto
 
 .section
   &-heading
