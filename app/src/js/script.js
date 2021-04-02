@@ -51,6 +51,7 @@ let catalogSlider = new Swiper('.catalog-slider', {
   thumbs: {
     swiper: thumbCatalogSlider
   },
+  allowTouchMove: true,
   autoplay: {
     delay: 5000,
   },
