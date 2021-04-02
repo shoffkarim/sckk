@@ -7,12 +7,14 @@ import Popup from "./modules/popup";
 import Validation from "./modules/validation";
 import InputMask from "./modules/inputMask";
 import Cookie from "./modules/cookie";
+import Logo from "./modules/logo";
 
 const burger = new Burger();
 const popup = new Popup();
 const validation = new Validation();
 const mask = new InputMask();
 const cookie = new Cookie();
+const logo = new Logo();
 
 // SWIPER
 // eslint-disable-next-line no-unused-vars

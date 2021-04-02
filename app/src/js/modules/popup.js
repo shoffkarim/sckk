@@ -24,7 +24,6 @@ class Popup {
       } else {
         popup = i.parentElement.parentElement;
       }
-
       popup.classList.remove("open-popup");
       document.body.classList.toggle("no-overflow");
     }));
