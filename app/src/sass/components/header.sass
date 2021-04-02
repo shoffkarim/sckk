@@ -65,6 +65,11 @@
           &::after
             width: 100%
             transition: all 0.5s
+        &.active
+          color: $green
+          &::after
+            background: linear-gradient(90deg,$green 100%,$green 0)
+            width: 100%
   &-mobile
     display: none
     .search-button
