@@ -5,10 +5,13 @@ import '../sass/style.sass';
 import Burger from "./modules/burger";
 import Popup from "./modules/popup";
 import Validation from "./modules/validation";
+import InputMask from "./modules/inputMask";
 
 const burger = new Burger();
 const popup = new Popup();
 const validation = new Validation();
+const mask = new InputMask();
+
 // SWIPER
 // eslint-disable-next-line no-unused-vars
 let mainSlider = new Swiper('.main-slider', {
@@ -25,6 +28,7 @@ let thumbCatalogSlider = new Swiper('.catalog-thumb-slider', {
   freeMode: true,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
+  allowTouchMove: false,
   breakpoints: {
     320: {
       slidesPerView: 2,

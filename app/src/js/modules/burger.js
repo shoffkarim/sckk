@@ -20,6 +20,7 @@ class Burger {
       e.preventDefault();
       i.classList.toggle("close");
       burgerBtns.forEach((j) => j.classList.toggle("close"));
+      document.body.classList.toggle("no-overflow");
       burgerMenu.classList.toggle("js-open");
     }));
   }

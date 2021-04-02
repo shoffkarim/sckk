@@ -11,6 +11,7 @@ class Popup {
     popupBtns.forEach((i) => i.addEventListener("click", function (e) {
       e.preventDefault();
       const typePopup = i.dataset.popup;
+      document.body.classList.toggle("no-overflow");
       const popup = document.querySelector(`.popup[data-popup="${typePopup}"]`);
       popup.classList.add("open-popup");
     }));
@@ -25,6 +26,7 @@ class Popup {
       }
 
       popup.classList.remove("open-popup");
+      document.body.classList.toggle("no-overflow");
     }));
   }
 }
