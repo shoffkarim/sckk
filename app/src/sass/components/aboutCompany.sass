@@ -1,0 +1,229 @@
+.main-img
+  position: relative
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    display: block
+.banner-text
+  width: 50%
+  position: absolute
+  bottom: 0px
+  left: 0px
+  &--green
+    background-color: $green
+    padding: 54px 140px 54px 120px
+  p
+    font-size: 24px
+    line-height: 30px
+    font-weight: 700
+    color: #fff
+.two-blocks
+  display: flex
+  flex-direction: row
+  &__wrapper
+    width: 50%
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+.two-blocks .numbers-list
+  padding-top: 197px
+  padding-left: 116px
+  padding-bottom: 197px
+  padding-right: 40px
+  background-color: #F3F8F4
+  display: flex
+  flex-direction: column
+  p
+    color: #000
+    font-size: 18px
+    line-height: 24px
+    font-weight: 400
+  .number
+    font-size: 34px
+    line-height: 46px
+    font-weight: 700
+  li
+    position: relative
+    padding-left: 20px
+    &::before
+      content: ""
+      display: block
+      width: 11px
+      height: 8px
+      position: absolute
+      top: 10px
+      left: -24px
+      background-image: url(/app/build/img/small-green-arrow.png)
+      background-repeat: no-repeat
+      background-size: contain
+
+.product-slider
+  padding-top: 262px
+  padding-bottom: 262px
+  background-color: $darkGreen
+  width: 50%
+  overflow: hidden
+  .swiper-slide
+    max-width: 376px
+    width: 100%
+    max-height: 376px
+    height: 100%
+    img
+      object-fit: cover
+.about-slider
+  width: 100%
+.production
+  width: 50%
+  position: relative
+  overflow: hidden
+  object-fit: cover
+  padding-top: 330px
+  padding-bottom: 328px
+  padding-left: 120px
+  background-color: $darkGreen
+  img
+    position: absolute
+    top: -100px
+    left: 0px
+    z-index: 0
+  &__heading
+    font-size: 32px
+    line-height: 36px
+    font-weight: 700
+    color: #fff
+    position: relative
+  &__text
+    font-size: 18px
+    line-height: 26px
+    font-weight: 700
+    color: #fff
+    margin-top: 26px
+    position: relative
+    max-width: 450px
+  .block-link
+    display: inline-block
+    margin-top: 50px
+
+.geography-facts
+  margin-left: 118px
+  &__text
+    max-width: 420px
+    margin-left: 20px
+  &__item
+    display: flex
+    flex-direction: row
+    align-items: center
+    &:first-child
+      .geography-facts__img
+        position: relative
+        &::before
+          content: ""
+          display: block
+          width: 108px
+          height: 118px
+          background-image: url(/app/build/img/about-company/geog-img-tr.png)
+          background-repeat: no-repeat
+          background-size: cover
+          position: absolute
+          top: 0
+          left: 0
+    &:nth-child(2)
+      margin-left: 160px
+      margin-top: 55px
+
+
+.geography-wrapper.about-geog
+  max-width: 585px
+.about-structure
+  padding: 140px 260px 140px 120px
+  background-color: #F3F8F4
+  .trinagle-pattern
+    width: 100%
+    object-fit: none
+
+.about
+  &-awards, &-enterprises
+    padding-top: 156px
+    padding-bottom: 158px
+    text-align: center
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__img
+      max-width: 181px
+      max-height: 181
+      margin-bottom: 50px
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &__text
+      font-weight: 700
+      font-size: 18px
+      line-height: 24px
+      color: #fff
+      max-width: 410px
+      margin-bottom: 34px
+  &-awards
+    background-color: $green
+  &-enterprises
+    background-color: $darkGreen
+  &-eco
+    background-color: #F3F8F4
+    padding-top: 134px
+    &__heading
+      font-weight: 700
+      font-size: 32px
+      line-height: 36px
+      color:#000
+      max-width: 265px
+      margin-right: 129px
+    &__wrapper
+      display: flex
+      flex-direction: row
+      align-items: center
+    &__text
+      align-self: flex-end
+      margin-left: 20px
+      p + p
+        margin-top: 20px
+    &__img
+      max-width: 661px
+      min-width: 661px
+      width: 100%
+      img
+        width: 100%
+        object-fit: cover
+    &__list
+      margin-top: 116px
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: space-between
+      padding-bottom: 50px
+
+.eco
+  &-item
+    background-color: #fff
+    width: calc(50% - 20px)
+    padding: 40px 60px 45px 60px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    margin-bottom: 92px
+    position: relative
+    &__icon
+      margin-bottom: 32px
+    &__text
+      max-width: 500px
+    &__triangle
+      position: absolute
+      top: -50px
+      right: 60px
+
+
+
+

@@ -63,3 +63,14 @@ let catalogSlider = new Swiper('.catalog-slider', {
     prevEl: '.catalog-button-prev',
   },
 });
+
+// eslint-disable-next-line no-unused-vars
+let aboutSlider = new Swiper('.about-slider', {
+  slidesPerView: 1,
+  spaceBetween: 38,
+  centeredSlides: true,
+  navigation: {
+    nextEl: '.about-button-next',
+    prevEl: '.about-button-prev',
+  },
+});
