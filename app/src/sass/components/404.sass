@@ -1,0 +1,30 @@
+.not-found
+  display: flex
+  flex-direction: row
+  align-items: center
+  padding-top: 145px
+  padding-left: 90px
+  padding-bottom: 196px
+  @media screen and ( max-width: 1560px )
+    padding-top: 17px
+    padding-bottom: 63px
+    padding-left: 95px
+  @media screen and ( max-width: 1250px )
+    flex-direction: column
+    padding-left: 40px
+  &__wrapper
+    max-width: 520px
+    margin-left: 114px
+    @media screen and ( max-width: 1250px )
+      margin-left: 0px
+  &__img
+    img
+      @media screen and ( max-width: 1560px )
+        max-width: 518px
+        object-fit: cover
+      @media screen and ( max-width: 767px )
+        max-width: 450px
+      @media screen and ( max-width: 500px )
+        max-width: 300px
+      @media screen and ( max-width: 400px )
+        max-width: 250px
