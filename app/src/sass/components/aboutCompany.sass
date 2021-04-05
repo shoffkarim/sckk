@@ -85,6 +85,7 @@
       object-fit: cover
 .about-slider
   width: 100%
+  position: relative
 .production
   width: 50%
   position: relative
@@ -236,6 +237,8 @@
       object-fit: cover
       display: block
     &__wrapper
+      padding-top: 133px
+      padding-left: 80px
       margin-left: 120px
       margin-top: 176px
       overflow: hidden
@@ -249,6 +252,28 @@
       .triangle
         width: 100%
         height: 100%
+        position: absolute
+        top: 0
+        left: 0
+    &__img
+      max-width: 273px
+      position: relative
+      display: block
+      margin-bottom: 42px
+    &__heading
+      font-size: 32px
+      line-height: 39px
+      color: #fff
+      max-width: 450px
+      margin-bottom: 30px
+      position: relative
+    &__text
+      color: #fff
+      max-width: 450px
+      position: relative
+
+
+
 
 
 
@@ -307,3 +332,29 @@
       line-height: 24px
       color: #fff
       font-weight: 700
+
+.about-button-prev
+  position: absolute
+  bottom: -40px
+  left: calc(50% - 50px)
+  &::after
+    content: ""
+    width: 38px
+    height: 29px
+    display: block
+    background-image: url(/app/build/img/btn-left.png)
+    background-repeat: no-repeat
+    background-size: cover
+
+.about-button-next
+  position: absolute
+  bottom: -40px
+  left: calc(50% + 50px)
+  &::after
+    content: ""
+    width: 38px
+    height: 29px
+    display: block
+    background-image: url(/app/build/img/btn-right.png)
+    background-repeat: no-repeat
+    background-size: cover
