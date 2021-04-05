@@ -7,11 +7,13 @@ class Popup {
   init() {
     const popupBtns = document.querySelectorAll(".js-open-popup");
     const popupBtnsClose = document.querySelectorAll(".js-popup-close");
+    const rightMenu = document.querySelector(".right-menu");
 
     popupBtns.forEach((i) => i.addEventListener("click", function (e) {
       e.preventDefault();
       const typePopup = i.dataset.popup;
       document.body.classList.toggle("no-overflow");
+      rightMenu.classList.toggle("hidden");
       const popup = document.querySelector(`.popup[data-popup="${typePopup}"]`);
       popup.classList.add("open-popup");
     }));
@@ -26,6 +28,7 @@ class Popup {
       }
       popup.classList.remove("open-popup");
       document.body.classList.toggle("no-overflow");
+      rightMenu.classList.toggle("hidden");
     }));
   }
 }
