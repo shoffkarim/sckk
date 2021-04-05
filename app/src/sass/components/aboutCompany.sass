@@ -5,6 +5,16 @@
     height: 100%
     object-fit: cover
     display: block
+  &__title
+    padding-top: 140px
+    padding-bottom: 42px
+    max-width: 865px
+    text-align: center
+    margin: 0 auto
+    font-size: 32px
+    line-height: 40px
+    font-weight: 700
+    color: #000
 .banner-text
   width: 50%
   position: absolute
@@ -204,6 +214,45 @@
       flex-wrap: wrap
       justify-content: space-between
       padding-bottom: 50px
+  &-vacancy
+    padding-top: 316px
+    padding-bottom: 300px
+    padding-left: 50px
+    &__wrapper
+      display: flex
+      flex-direction: row
+      margin-top: 54px
+      p
+        max-width: 385px
+        margin-bottom: 34px
+    &__img
+      margin-left: 54px
+  &-us
+    position: relative
+    overflow: hidden
+    &__background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      display: block
+    &__wrapper
+      margin-left: 120px
+      margin-top: 176px
+      overflow: hidden
+      position: absolute
+      top: 0
+      left: 0
+      display: block
+      width: 896px
+      height: 1022px
+      overflow: hidden
+      .triangle
+        width: 100%
+        height: 100%
+
+
+
+
 
 .eco
   &-item
@@ -225,5 +274,36 @@
       right: 60px
 
 
-
-
+.img-links
+  background-color: $darkGreen
+  padding: 140px 120px
+  &-list
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+  &-item
+    width: 506px
+    height: 355px
+    position: relative
+    &::before
+      content: ""
+      display: block
+      width: 100%
+      height: 280px
+      position: absolute
+      bottom: 0
+      left: 0
+      background: linear-gradient(360deg, #000000 25.24%, rgba(0, 0, 0, 0.6) 47.22%, rgba(0, 0, 0, 0) 64.32%)
+      opacity: 0.6
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+    p
+      position: absolute
+      bottom: 27px
+      left: 50px
+      font-size: 18px
+      line-height: 24px
+      color: #fff
+      font-weight: 700
