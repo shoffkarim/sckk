@@ -15,30 +15,72 @@
     line-height: 40px
     font-weight: 700
     color: #000
+    @media screen and ( max-width: 1560px )
+      padding-top: 98px
+      padding-bottom: 42px
+      max-width: 702px
+      font-size: 27px
+      line-height: 37px
+    @media screen and ( max-width: 1000px )
+      padding-left: 40px
+      padding-right: 80px
+    @media screen and ( max-width: 767px )
+      padding-left: 40px
+      padding-right: 40px
+    @media screen and ( max-width: 500px )
+      padding-left: 20px
+      padding-right: 20px
+      font-size: 20px
+      line-height: 29px
 .banner-text
   width: 50%
   position: absolute
   bottom: 0px
   left: 0px
+  @media screen and ( max-width: 1000px )
+    position: relative
+    width: 100%
+    bottom: auto
+    left: auto
   &--green
     background-color: $green
     padding: 54px 140px 54px 120px
+    @media screen and ( max-width: 1560px )
+      padding: 45px 70px 43px 37px
+    @media screen and ( max-width: 1000px )
+      padding: 37px 70px 43px 37px
   p
     font-size: 24px
     line-height: 30px
     font-weight: 700
     color: #fff
+    @media screen and ( max-width: 1200px )
+      font-size: 20px
+      line-height: 26px
+    @media screen and ( max-width: 500px )
+      font-size: 16px
+      line-height: 20px
   &--small
     padding: 44px 57px 45px 60px
     width: 39%
+    @media screen and ( max-width: 1560px )
+      width: 50%
+      padding: 49px 70px 46px 39px
+      p
+        font-size: 16px
+        line-height: 22px
     p
       font-size: 18px
       line-height: 27px
 .two-blocks
   display: flex
   flex-direction: row
+  @media screen and ( max-width: 1000px )
+    flex-direction: column
   &__wrapper
     width: 50%
+    @media screen and ( max-width: 1000px )
+      width: 100%
     img
       width: 100%
       height: 100%
@@ -52,19 +94,26 @@
   background-color: #F3F8F4
   display: flex
   flex-direction: column
+  @media screen and ( max-width: 1560px )
+    padding: 69px 40px 31px 68px
+  @media screen and ( max-width: 500px )
+    padding: 30px 20px 30px 20px
   p
     color: #000
-    font-size: 18px
-    line-height: 24px
+    font-size: 16px
+    line-height: 22px
     font-weight: 400
   .number
-    font-size: 34px
-    line-height: 46px
+    font-size: 30px
+    line-height: 43px
     font-weight: 700
+    @media screen and ( max-width: 500px )
+      font-size: 20px
+      line-height: 30px
   li
     position: relative
     padding-left: 20px
-    margin-bottom: 39px
+    margin-bottom: 35px
     &::before
       content: ""
       display: block
@@ -84,6 +133,14 @@
   width: 50%
   overflow: hidden
   position: relative
+  @media screen and ( max-width: 1560px )
+    padding-top: 162px
+    padding-bottom: 162px
+  @media screen and ( max-width: 1000px )
+    width: 100%
+  @media screen and ( max-width: 500px )
+    padding-top: 50px
+    padding-bottom: 100px
   &::after
     content: ""
     display: block
@@ -95,13 +152,19 @@
     position: absolute
     top: 161px
     right: 404px
+    @media screen and ( max-width: 1560px )
+      top: 65px
   .swiper-slide
     max-width: 376px
     width: 100%
     max-height: 376px
     height: 100%
+    @media screen and ( max-width: 1200px )
+      max-width: 320px
+      max-height: 320px
     img
       object-fit: cover
+      width: 100%
 .about-slider
   width: 100%
   position: relative
@@ -114,18 +177,34 @@
   padding-bottom: 328px
   padding-left: 120px
   background-color: $darkGreen
+  @media screen and ( max-width: 1560px )
+    padding-top: 232px
+    padding-bottom: 200px
+    padding-left: 80px
+  @media screen and ( max-width: 1000px )
+    width: 100%
+  @media screen and ( max-width: 500px )
+    padding-top: 50px
+    padding-bottom: 100px
+    padding-left: 20px
   img
     position: absolute
     top: -130px
     left: 0
     z-index: 0
     max-width: 1020px
+    @media screen and ( max-width: 1560px )
+      top: -77px
+      max-width: 750px
   &__heading
     font-size: 32px
     line-height: 36px
     font-weight: 700
     color: #fff
     position: relative
+    @media screen and ( max-width: 1560px )
+      font-size: 28px
+      line-height: 33px
   &__text
     font-size: 18px
     line-height: 26px
@@ -134,19 +213,45 @@
     margin-top: 26px
     position: relative
     max-width: 450px
+    @media screen and ( max-width: 1560px )
+      font-size: 16px
+      line-height: 24px
+      margin-top: 26px
+      max-width: 378px
   .block-link
     display: inline-block
     margin-top: 50px
+    @media screen and ( max-width: 1560px )
+      margin-top: 35px
 
 .geography-facts
   margin-left: 153px
+  @media screen and ( max-width: 1760px )
+    margin-left: 0px
+  @media screen and ( max-width: 1560px )
+    margin-left: 65px
+  @media screen and ( max-width: 1350px )
+    display: flex
+    flex-direction: column
+    margin-left: 0px
+    margin-top: 20px
   &__text
     max-width: 420px
     margin-left: 20px
+    @media screen and ( max-width: 1560px )
+      max-width: 285px
+    @media screen and ( max-width: 1200px )
+      max-width: none
+    @media screen and ( max-width: 500px )
+      margin-top: 40px
   &__item
     display: flex
     flex-direction: row
     align-items: center
+    @media screen and ( max-width: 1200px )
+      margin-top: 40px
+    @media screen and ( max-width: 500px )
+      flex-direction: column
     .geography-facts__img
       position: relative
       img
@@ -160,6 +265,12 @@
     &:nth-child(2)
       margin-left: 138px
       margin-top: 67px
+      @media screen and ( max-width: 1560px )
+        margin-top: 28px
+      @media screen and ( max-width: 1350px )
+        margin-left: 0px
+      @media screen and ( max-width: 1200px )
+        margin-top: 40px
       .geography-facts__img
         &--tr
           transform: rotate(180deg)
@@ -168,30 +279,67 @@
 
 .geography-wrapper.about-geog
   max-width: 585px
+  @media screen and ( max-width: 1200px )
+    max-width: none
 .about-structure
   padding:63px 260px 120px 120px
   background-color: #F3F8F4
+  @media screen and ( max-width: 1560px )
+    padding: 75px 75px 75px 80px
+  @media screen and ( max-width: 500px )
+    padding: 50px 20px 50px 20px
   h3
     margin-bottom: 26px
+    @media screen and ( max-width: 1560px )
+      margin-top: 0px
+      font-size: 28px
+      line-height: 33px
   ul
     padding-left: 23px
   .trinagle-pattern
     width: 100%
     object-fit: none
     margin-bottom: 19px
+    @media screen and ( max-width: 1560px )
+      margin-bottom: 33px
   p + p
     margin-top: 53px
 
 .about
   &-geography
     padding-bottom: 110px
+    @media screen and ( max-width: 1560px )
+      padding-top: 100px
+    @media screen and ( max-width: 1200px )
+        padding-top: 50px
     .container
       max-width: 1600px
+      @media screen and ( max-width: 1760px )
+        padding-left: 80px
+        margin-left: 0px
+      @media screen and ( max-width: 1560px )
+        padding-left: 40px
+      @media screen and ( max-width: 500px )
+        padding-left: 20px
+        padding-right: 20px
+    .geography-text
+      @media screen and ( max-width: 1200px )
+        max-width: none
     .about-geog
       margin-top: 76px
+      @media screen and ( max-width: 1561px )
+        margin-top: 67px
+        max-width: 440px
+      @media screen and ( max-width: 1200px )
+        max-width: none
+        margin-top: 0px
     .geography-heading
       font-size: 32px
       margin-bottom: 20px
+      @media screen and ( max-width: 1560px )
+        font-size: 27px
+        line-height: 35px
+        margin-bottom: 28px
   &-awards, &-enterprises
     padding-top: 156px
     padding-bottom: 158px
@@ -210,11 +358,17 @@
       position: absolute
     .transparent-btn a
       padding: 16px 40px 14px 40px
+      @media screen and ( max-width: 1560px )
+        padding: 12px 40px 13px
+        font-size: 14px
+
     &__img
       max-width: 181px
       max-height: 181px
       margin-bottom: 50px
       position: relative
+      @media screen and ( max-width: 1560px )
+        margin-bottom: 38px
       img
         width: 100%
         height: 100%
@@ -228,40 +382,68 @@
       color: #fff
       max-width: 410px
       margin-bottom: 34px
+      @media screen and ( max-width: 1560px )
+        font-size: 15px
+        line-height: 24px
+        color: #fff
+        max-width: 342px
+
   &-awards
     background-color: $green
     position: relative
+    @media screen and ( max-width: 1560px )
+      padding-top: 102px
+      padding-bottom: 97px
     &::before
       top: 270px
       left: 95px
       transform: rotate(180deg)
+      @media screen and ( max-width: 1560px )
+        top: 220px
+        left: 65px
     &::after
       top: auto
       right: 120px
       bottom: 115px
-
+      @media screen and ( max-width: 1560px )
+        right: 45px
+        bottom: 60px
     &__tr
       position: absolute
       top: -60px
       left: -78px
       z-index: 1
+      @media screen and ( max-width: 500px )
+        display: none
   &-enterprises
     padding-top: 139px
     padding-bottom: 159px
     background-color: $darkGreen
     position: relative
+    @media screen and ( max-width: 1560px )
+      padding-top: 102px
+      padding-bottom: 97px
     &::before
       top: 246px
       left: 106px
       transform: rotate(180deg)
+      @media screen and ( max-width: 1560px )
+        top: 190px
+        left: 55px
     &::after
       top: 100px
       right: 120px
+      @media screen and ( max-width: 1560px )
+        top: 55px
+        right: 50px
     &__img
       max-width: 210px
       max-height: 210px
       margin-bottom: 37px
       position: relative
+      @media screen and ( max-width: 1560px )
+        max-width: 181px
+        max-height: 181px
       img
         width: 100%
         height: 100%
@@ -274,12 +456,27 @@
       right: -83px
       z-index: 1
       transform: rotate(180deg)
+      @media screen and ( max-width: 500px )
+        display: none
   &-eco
     background-color: #F3F8F4
     padding-top: 134px
+    @media screen and ( max-width: 1560px )
+      padding-top: 100px
+    @media screen and ( max-width: 767px )
+        padding-top: 50px
     .container
       max-width: 1600px
-      padding-right: 0px
+      padding-right: 40px
+      @media screen and ( max-width: 1760px )
+        padding-left: 80px
+        margin-left: 0px
+      @media screen and ( max-width: 1600px )
+        padding-left: 40px
+      @media screen and ( max-width: 500px )
+        padding-left: 20px
+        padding-right: 20px
+
     &__heading
       font-weight: 700
       font-size: 32px
@@ -288,11 +485,35 @@
       max-width: 265px
       margin-right: 125px
       margin-top: 19px
+      @media screen and ( max-width: 1560px )
+        font-size: 28px
+        line-height: 32px
+        color: #000
+        max-width: 265px
+        margin-right: 32px
+        margin-top: 0px
+      @media screen and ( max-width: 1000px )
+        max-width: none
+        margin-right: 0px
+        margin-bottom: 20px
+      @media screen and ( max-width: 767px )
+        font-size: 25px
+        line-height: 30px
+        text-align: center
+
+
     &__wrapper
       display: flex
       flex-direction: row
       align-items: center
       position: relative
+      @media screen and ( max-width: 1270px )
+        flex-wrap: wrap
+        justify-content: space-between
+      @media screen and ( max-width: 1000px )
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
       &::after
         content: ""
         display: block
@@ -305,16 +526,39 @@
         top: 60px
         right: 155px
         transform: rotate(180deg)
+        @media screen and ( max-width: 1560px )
+          top: 0px
+          right: 115px
+        @media screen and ( max-width: 1270px )
+          display: none
     &__text
       align-self: flex-end
       margin-left: 38px
       max-width: 425px
+      @media screen and ( max-width: 1560px )
+        p
+          max-width: 325px
+      @media screen and ( max-width: 1270px )
+        margin-left: 0px
+        max-width: none
+        margin-top: 30px
+        p
+          max-width: none
       p + p
         margin-top: 20px
     &__img
       max-width: 661px
       min-width: 661px
       width: 100%
+      @media screen and ( max-width: 1560px )
+        max-width: 491px
+        min-width: 491px
+      @media screen and ( max-width: 767px )
+        max-width: 400px
+        min-width: 400px
+      @media screen and ( max-width: 500px )
+        max-width: 230px
+        min-width: 230px
       img
         width: 100%
         object-fit: cover
@@ -325,37 +569,85 @@
       flex-wrap: wrap
       justify-content: space-between
       padding-bottom: 50px
+      @media screen and ( max-width: 1560px )
+        padding-right: 40px
+      @media screen and ( max-width: 767px )
+        padding-right: 0px
   &-vacancy
     padding-top: 316px
     padding-bottom: 316px
     padding-left: 20px
+    padding-right: 40px
+    @media screen and ( max-width: 1560px )
+      padding-top: 186px
+      padding-bottom: 182px
+    @media screen and ( max-width: 1200px )
+      padding-top: 50px
+      padding-bottom: 50px
     p
       max-width: 650px
+      @media screen and ( max-width: 1560px )
+        max-width: 515px
+      @media screen and ( max-width: 1200px )
+        max-width: none
     &-img
       display: flex
       align-items: center
+      padding-left: 20px
+      @media screen and ( max-width: 1200px )
+        display: none
+        + .two-blocks__wrapper
+          width: 100%
       img
         max-height: 756px
         object-fit: contain
+        @media screen and ( max-width: 1560px )
+          max-height: 545px
+
     &__wrapper
       display: flex
       flex-direction: row
       margin-top: 54px
+      @media screen and ( max-width: 1300px )
+        flex-direction: column-reverse
       p
         max-width: 385px
         margin-bottom: 34px
+        @media screen and ( max-width: 1300px )
+          max-width: none
+
+    &__text
+      @media screen and ( max-width: 1560px )
+        max-width: 300px
+      @media screen and ( max-width: 1300px )
+        max-width: none
     &__img
       margin-left: 54px
+      @media screen and ( max-width: 1560px )
+        max-width: 272px
+        max-height: 190px
+        margin-left: 10px
+      @media screen and ( max-width: 1300px )
+        margin-bottom: 20px
+        margin-left: 0px
     .transparent-btn a
       padding: 16px 40px 14px 40px
   &-us
     position: relative
     overflow: hidden
+    height: 100vh
+    @media screen and ( max-width: 500px )
+      height: auto
+    @media screen and ( max-height: 560px )
+      height: auto
     &__background
       width: 100%
       height: 100%
       object-fit: cover
       display: block
+      @media screen and ( max-width: 1560px )
+        width: 111%
+        height: 111%
     &__wrapper
       padding-top: 133px
       padding-left: 80px
@@ -369,12 +661,48 @@
       width: 896px
       height: 1022px
       overflow: hidden
+      @media screen and ( max-width: 1560px )
+        padding-top: 70px
+        padding-left: 80px
+        margin-left: 40px
+        margin-top: 291px
+        width: 750px
+        height: 860px
+      @media screen and ( max-width: 1000px )
+        margin-top: 200px
+      @media screen and ( max-width: 767px )
+        margin-left: 0px
+        padding-left: 20px
+      @media screen and ( max-width: 500px )
+        position: relative
+        top: auto
+        left: auto
+        margin-top: 0px
+        height: auto
+        background-color: $green
+        padding-bottom: 30px
+        width: auto
+        padding-right: 20px
+      @media screen and ( max-height: 745px )
+        margin-top: 20px
+      @media screen and ( max-height: 560px )
+        position: relative
+        top: auto
+        left: auto
+        margin-top: 0px
+        height: auto
+        background-color: $green
+        padding-bottom: 30px
+        width: auto
+        padding-right: 20px
       .triangle
         width: 100%
         height: 100%
         position: absolute
         top: 0
         left: 0
+        @media screen and ( max-width: 500px )
+          display: none
     &__img
       max-width: 273px
       position: relative
@@ -387,6 +715,14 @@
       max-width: 450px
       margin-bottom: 30px
       position: relative
+      @media screen and ( max-width: 1560px )
+        font-size: 28px
+        font-weight: 700
+        line-height: 37px
+      @media screen and ( max-width: 1366px )
+        font-size: 28px
+        font-weight: 700
+        line-height: 37px
     &__text
       color: #fff
       max-width: 450px
@@ -409,27 +745,51 @@
     align-items: flex-start
     margin-bottom: 92px
     position: relative
+    @media screen and ( max-width: 1560px )
+      padding: 33px 37px 45px
+      margin-bottom: 110px
+    @media screen and ( max-width: 1000px )
+      width: 100%
+      margin-bottom: 75px
     &__icon
       margin-bottom: 32px
     &__text
       max-width: 500px
+      @media screen and ( max-width: 1560px )
+        max-width: 470px
     &__triangle
       position: absolute
       top: -50px
       right: 60px
+      @media screen and ( max-width: 1560px )
+        top: -60px
+        right: 40px
+        max-width: 157px
 
 
 .img-links
   background-color: $darkGreen
   padding: 140px 120px
+  @media screen and ( max-width: 1560px )
+    padding: 100px 40px
+  @media screen and ( max-width: 500px )
+    padding: 50px 20px
   &-list
     display: flex
     flex-direction: row
     justify-content: space-between
+    @media screen and ( max-width: 1000px )
+      flex-direction: column
+      justify-content: flex-start
   &-item
-    width: 506px
+    width: calc(100% / 3 - 20px)
     height: 355px
     position: relative
+    @media screen and ( max-width: 1560px )
+      height: 264px
+    @media screen and ( max-width: 1000px )
+      width: 100%
+      margin-bottom: 20px
     &::before
       content: ""
       display: block
@@ -440,10 +800,17 @@
       left: 0
       background: linear-gradient(360deg, #000000 25.24%, rgba(0, 0, 0, 0.6) 47.22%, rgba(0, 0, 0, 0) 64.32%)
       opacity: 0.6
+      z-index: 1
     img
       width: 100%
       height: 100%
       object-fit: cover
+    a
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
     p
       position: absolute
       bottom: 37px
@@ -452,11 +819,20 @@
       line-height: 24px
       color: #fff
       font-weight: 700
+      z-index: 2
+      @media screen and ( max-width: 1560px )
+        bottom: 26px
+        left: 31px
+        font-size: 16px
+        line-height: 20px
+
 
 .about-button-prev
   position: absolute
   bottom: -68px
   left: calc(50% - 20px)
+  @media screen and ( max-width: 1560px )
+    left: calc(50% - 35px)
   &::after
     content: ""
     width: 38px
@@ -470,6 +846,8 @@
   position: absolute
   bottom: -68px
   left: calc(50% + 35px)
+  @media screen and ( max-width: 1560px )
+    left: calc(50% + 20px)
   &::after
     content: ""
     width: 38px
@@ -483,6 +861,21 @@
   .banner-text
     padding-left: 114px
     padding-bottom: 29px
+    @media screen and ( max-width: 1560px )
+      padding-left: 36px
+      width: 80%
+      p
+        font-size: 60px
+        line-height: 60px
+    @media screen and ( max-width: 1000px )
+      position: absolute
+      bottom: 0px
+      left: 0px
+    @media screen and ( max-width: 500px )
+      width: 50%
+      p
+        font-size: 30px
+        line-height: 30px
     p
       font-size: 84px
       line-height: 83px
