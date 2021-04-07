@@ -11,8 +11,12 @@ class Burger {
 
     burgerBtns.forEach((i) => i.addEventListener("click", function (e) {
       e.preventDefault();
+      if (i.classList.contains("close")) {
+        document.body.classList.remove("no-overflow");
+      } else {
+        document.body.classList.add("no-overflow");
+      }
       i.classList.toggle("close");
-      document.body.classList.toggle("no-overflow");
       burgerMenu.classList.toggle("js-open");
     }));
 
@@ -20,7 +24,7 @@ class Burger {
       e.preventDefault();
       i.classList.toggle("close");
       burgerBtns.forEach((j) => j.classList.toggle("close"));
-      document.body.classList.toggle("no-overflow");
+      document.body.classList.remove("no-overflow");
       burgerMenu.classList.toggle("js-open");
     }));
   }
