@@ -1,0 +1,51 @@
+.gallery
+  &-wrapper
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    flex-wrap: wrap
+    margin-bottom: 100px
+  &-item
+    display: block
+    max-width: calc(100% / 4 - 26px)
+    margin-right: 34px
+    margin-bottom: 40px
+    @media screen and ( max-width: 1366px )
+      max-width: calc(100% / 3 - 26px)
+      &:nth-child(4n)
+        margin-right: 34px
+      &:nth-child(3n)
+        margin-right: 0px
+    @media screen and ( max-width: 767px )
+      max-width: calc(100% / 2 - 26px)
+      &:nth-child(3n)
+        margin-right: 34px
+      &:nth-child(2n)
+        margin-right: 0px
+    @media screen and ( max-width: 500px )
+      max-width: 100%
+      margin-right: auto
+      margin-left: auto
+      &:nth-child(3n)
+        margin-right: auto
+        margin-left: auto
+      &:nth-child(2n)
+        margin-right: auto
+        margin-left: auto
+    &:nth-child(4n)
+      margin-right: 0px
+    img
+      width: 100%
+      display: block
+.goverlay,
+.glightbox-mobile .goverlay
+  background-color: rgba(0,102,44,1)
+.glightbox-clean .gslide-media
+  box-shadow: none
+.glightbox-clean .gclose, .glightbox-clean .gnext, .glightbox-clean .gprev
+  background-color: transparent
+  transition: all 0.4s
+.glightbox-clean .gclose:hover, .glightbox-clean .gnext:hover, .glightbox-clean .gprev:hover
+  background-color: transparent
+  opacity: 0.4
+  transition: all 0.4s
