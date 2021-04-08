@@ -85,6 +85,21 @@
       width: 100%
       height: 100%
       object-fit: cover
+  &--sticky
+    height: 100vh
+    margin-right: -17px
+    @media screen and ( max-width: 1000px )
+      height: auto
+      margin-right: 0px
+      .two-blocks__wrapper
+        width: 100%
+      .two-blocks__wrapper--scoller
+        width: 100%
+    .two-blocks__wrapper
+      width: calc(50% - 8px)
+    .two-blocks__wrapper--scoller
+      overflow-y: auto
+      width: calc(50% + 8px)
 
 .two-blocks .numbers-list
   padding-top: 197px
