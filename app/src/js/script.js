@@ -9,6 +9,7 @@ import InputMask from "./modules/inputMask";
 import Cookie from "./modules/cookie";
 import Logo from "./modules/logo";
 import Video from "./modules/video";
+import Seo from "./modules/seo";
 
 const burger = new Burger();
 const popup = new Popup();
@@ -17,6 +18,7 @@ const mask = new InputMask();
 const cookie = new Cookie();
 const logo = new Logo();
 const video = new Video();
+const seo = new Seo();
 
 // SWIPER
 // eslint-disable-next-line no-unused-vars
