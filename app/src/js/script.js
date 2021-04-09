@@ -103,3 +103,16 @@ let newsSlider = new Swiper('.news-slider', {
     }
   }
 });
+
+if (document.querySelector(".photo-slider")) {
+  if (document.querySelectorAll(".photo-slider__item").length > 1) {
+    let photoSlider = new Swiper('.photo-slider', {
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.photo-slider-next',
+        prevEl: '.photo-slider-prev',
+      },
+      loop: true,
+    });
+  }
+}
