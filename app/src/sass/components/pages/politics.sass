@@ -1,0 +1,128 @@
+.politics
+  &-list
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    margin-bottom: 139px
+  &-item
+    margin-right: 1px
+    margin-bottom: 1px
+    background-color: $lightGreen
+    width: calc(100% / 3 - 2px)
+    position: relative
+    @media screen and ( max-width: 1366px )
+      width: calc(100% / 3 - 1px)
+    @media screen and ( max-width: 1000px )
+      width: calc(100% / 2 - 1px)
+      &:nth-child(3n)
+        margin-right: 1px
+      &:nth-child(2n)
+        margin-right: 0px
+    @media screen and ( max-width: 600px )
+      width: 100%
+      margin-right: 0px
+      &:nth-child(3n)
+        margin-right: 0px
+    &:nth-child(3n)
+      margin-right: 0px
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      background-repeat: no-repeat
+      background-size: cover
+    &:first-child
+      &::before
+        width: 97px
+        height: 35px
+        background-image: url(/app/build/img/five.png)
+        bottom: 90px
+        right: 55px
+        @media screen and ( max-width: 1366px )
+          bottom: 85px
+          right: 30px
+    &:nth-child(2n)
+      &::before
+        width: 97px
+        height: 35px
+        background-image: url(/app/build/img/five.png)
+        top: 60px
+        right: 55px
+        @media screen and ( max-width: 1366px )
+          top: 30px
+          right: 40px
+    &:nth-child(3n)
+      &::before
+        width: 54px
+        height: 35px
+        background-image: url(/app/build/img/three.png)
+        bottom: 85px
+        left: 100px
+        @media screen and ( max-width: 1366px )
+          bottom: 70px
+          left: 55px
+    &:nth-child(4n)
+      &::before
+        width: 54px
+        height: 35px
+        background-image: url(/app/build/img/three.png)
+        top: 70px
+        left: 75px
+        @media screen and ( max-width: 1366px )
+          top: 40px
+          left: 40px
+    &:nth-child(5n)
+      &::before
+        width: 97px
+        height: 35px
+        background-image: url(/app/build/img/five.png)
+        bottom: 115px
+        left: 80px
+        @media screen and ( max-width: 1366px )
+          bottom: 90px
+          left: auto
+          right: 35px
+
+    &__href
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding-top: 65px
+      padding-bottom: 33px
+      padding-right: 15px
+      padding-left: 15px
+      @media screen and ( max-width: 1366px )
+        padding-top: 50px
+        padding-bottom: 24px
+      &:hover
+        .politics-item__heading
+          border-color: rgba(255, 255, 255, 1)
+          transition: all 0.4s
+    &__heading
+      font-size: 20px
+      line-height: 24px
+      font-weight: 700
+      color: #fff
+      border-bottom: 1px solid rgba(255, 255, 255, 0)
+      margin-bottom: auto
+      transition: all 0.4s
+      @media screen and ( max-width: 1366px )
+        font-size: 16px
+        line-height: 21px
+    &__img
+      width: 200px
+      height: 161px
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      margin-bottom: 88px
+      @media screen and ( max-width: 1560px )
+        width: 161px
+        height: 122px
+        margin-bottom: 64px
+        img
+          width: 100%
+          height: 100%
+          object-fit: contain
+
