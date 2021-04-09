@@ -1,0 +1,21 @@
+.video
+  video
+    width: 100%
+    display: block
+  &-wrapper
+    position: relative
+    width: 100%
+  &-button
+    position: absolute
+    width: 64px
+    height: 64px
+    top: calc(50% - 32px)
+    left: calc(50% - 32px)
+    transition: all 0.4s
+    svg
+      transform: scale(1)
+      transition: all 0.4s
+    &:hover
+      svg
+        transform: scale(1.1)
+        transition: all 0.4s

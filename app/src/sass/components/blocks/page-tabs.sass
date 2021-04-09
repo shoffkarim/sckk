@@ -1,0 +1,54 @@
+.page-tabs
+  width: 100%
+  padding-right: 40px
+  padding-left: 40px
+  margin-top: 90px
+  overflow-x: hidden
+  &__wrapper
+    border-bottom: 1px solid rgba(243,248,244,1)
+    display: flex
+    justify-content: center
+    @media screen and ( max-width: 1000px )
+      overflow-x: auto
+      padding-bottom: 20px
+      margin-bottom: -20px
+      justify-content: flex-start
+  &__list
+    display: flex
+    flex-direction: row
+  &__item
+    margin-right: 20px
+    padding-bottom: 15px
+    margin-bottom: -1px
+    @media screen and ( max-width: 1150px )
+      margin-right: 10px
+      padding-bottom: 10px
+    @media screen and ( max-width: 767px )
+      padding-bottom: 5px
+    &:last-child
+      margin-right: 0px
+    a
+      font-size: 18px
+      line-height: 24px
+      font-weight: 400
+      color: #000
+      transition: all 0.4s
+      @media screen and ( max-width: 1366px )
+        font-size: 16px
+        line-height: 21px
+      @media screen and ( max-width: 1150px )
+        font-size: 14px
+        line-height: 19px
+      @media screen and ( max-width: 1150px )
+        white-space: pre
+
+    &:hover
+      a
+        color: $lightGreen
+        transition: all 0.4s
+    &.active
+      border-bottom: 1px solid $lightGreen
+      a
+        color: $lightGreen
+
+

@@ -189,7 +189,33 @@ body
         color: $green
         border-bottom: 1px solid rgba(0, 0, 0, 0)
         transition: all 0.4s
-
+  &-title
+    padding-top: 140px
+    padding-bottom: 42px
+    max-width: 865px
+    text-align: center
+    margin: 0 auto
+    font-size: 32px
+    line-height: 40px
+    font-weight: 700
+    color: #000
+    @media screen and ( max-width: 1560px )
+      padding-top: 98px
+      padding-bottom: 42px
+      max-width: 702px
+      font-size: 27px
+      line-height: 37px
+    @media screen and ( max-width: 1000px )
+      padding-left: 40px
+      padding-right: 80px
+    @media screen and ( max-width: 767px )
+      padding-left: 40px
+      padding-right: 40px
+    @media screen and ( max-width: 500px )
+      padding-left: 20px
+      padding-right: 20px
+      font-size: 20px
+      line-height: 29px
 .pointer-down
   font-size: 16px
   line-height: 28px
