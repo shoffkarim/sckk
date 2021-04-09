@@ -804,6 +804,15 @@
     @media screen and ( max-width: 1000px )
       flex-direction: column
       justify-content: flex-start
+    &--two
+      .img-links-item
+        width: calc(50% - 27px)
+        @media screen and ( max-width: 1000px )
+          width: 100%
+        &:nth-child(2n)
+          margin-right: 0px
+        &:nth-child(3n)
+          margin-right: 40px
   &-item
     width: calc(100% / 3 - 27px)
     height: 355px
