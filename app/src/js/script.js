@@ -8,6 +8,7 @@ import Validation from "./modules/validation";
 import InputMask from "./modules/inputMask";
 import Cookie from "./modules/cookie";
 import Logo from "./modules/logo";
+import Video from "./modules/video";
 
 const burger = new Burger();
 const popup = new Popup();
@@ -15,6 +16,7 @@ const validation = new Validation();
 const mask = new InputMask();
 const cookie = new Cookie();
 const logo = new Logo();
+const video = new Video();
 
 // SWIPER
 // eslint-disable-next-line no-unused-vars

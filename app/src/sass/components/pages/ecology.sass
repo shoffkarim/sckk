@@ -1,32 +1,66 @@
 .ecology
   padding-top: 140px
+  @media screen and ( max-width: 1366px )
+    padding-top: 100px
   .container
     max-width: none
     padding-left: 120px
     padding-right: 120px
     margin: 0
+    @media screen and ( max-width: 1366px )
+      padding-left: 40px
+      padding-right: 40px
+  &--np
+    @media screen and ( max-width: 500px )
+      display: none
+    .container
+      @media screen and ( max-width: 1366px )
+        padding-left: 0px
+        padding-right: 0px
   &-list
     display: flex
     flex-direction: row
-    justify-content: space-between
-    margin-bottom: 140px
+    justify-content: flex-start
+    @media screen and ( max-width: 1000px )
+      flex-wrap: wrap
   &-item
+    width: calc(100% / 3)
+    @media screen and ( max-width: 1000px )
+      width: 100%
+      margin-bottom: 20px
     &__text
       max-width: 410px
       font-size: 18px
       line-height: 26px
       font-weight: 400
+      @media screen and ( max-width: 1560px )
+        max-width: 340px
+        font-size: 16px
+        line-height: 24px
+      @media screen and ( max-width: 1200px )
+        max-width: 250px
+      @media screen and ( max-width: 1000px )
+        max-width: none
     &__img
       width: 50px
       height: 50px
-      margin-bottom: 34px
+      margin-bottom: 30px
+      @media screen and ( max-width: 1000px )
+        margin-bottom: 15px
   &-gallery
     display: flex
     flex-direction: row
     justify-content: flex-start
+
     &__img
       width: calc(100% / 3)
       img
         display: block
         width: 100%
         object-fit: cover
+.img-links + .news-section
+  padding-top: 140px
+  @media screen and ( max-width: 1366px )
+    padding-top: 100px
+  @media screen and ( max-width: 767px )
+    padding-top: 50px
