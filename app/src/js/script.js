@@ -109,16 +109,16 @@ let historySlider = new Swiper('.history-slider', {
   spaceBetween: 55,
   navigation: {
     nextEl: '.history-button-next',
+    prevEl: '.history-button-prev'
   },
   breakpoints: {
     320: {
       spaceBetween: 5,
     },
     500: {
-      slidesPerView: 55,
+      spaceBetween: 55,
     }
   },
-  loop: false,
 });
 
 if (document.querySelector(".photo-slider")) {
