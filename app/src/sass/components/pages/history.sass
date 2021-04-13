@@ -88,7 +88,7 @@
         width: 11px
         height: 11px
         display: block
-        background-image: url(/app/build/img/history/triangle.svg)
+        background-image: url(/app/build/img/triangle.svg)
         background-repeat: no-repeat
         background-size: cover
         position: absolute
@@ -113,3 +113,55 @@
       path
         stroke: $green
         transition: all 0.4s
+.history
+  &-list
+    margin-top: 50px
+    margin-bottom: 140px
+  &-item
+    margin-bottom: 74px
+    padding-top: 108px
+    position: relative
+    &::before
+      content: ""
+      display: block
+      width: 184px
+      height: 35px
+      position: absolute
+      top: 0px
+      left: calc(50% - 92px)
+      background-image: url(/app/build/img/triangles-pattern-rotate.png)
+      background-repeat: no-repeat
+      background-size: contain
+    &:first-child
+      padding-top: 0px
+      &::before
+        display: none
+    &__wrapper
+      max-width: 860px
+      margin: 0 auto
+    &__year
+      font-size: 28px
+      line-height: 36px
+      font-weight: 700
+      color: #000
+      margin-bottom: 9px
+    &__photos
+      display: flex
+      flex-direction: row
+      padding: 0px 120px
+      @media screen and ( max-width: 1560px )
+        padding: 0px 40px
+      @media screen and ( max-width: 1200px )
+        width: 100%
+        max-width: 860px
+        margin: 0 auto
+        padding: 0px
+        flex-direction: column
+        figure
+          width: auto
+          margin-right: 0px
+      figure
+        width: calc(100% / 3)
+        margin-right: 20px
+        &:nth-child(3n)
+          margin-right: 0px
