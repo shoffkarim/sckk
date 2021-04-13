@@ -104,6 +104,23 @@ let newsSlider = new Swiper('.news-slider', {
   }
 });
 
+let historySlider = new Swiper('.history-slider', {
+  slidesPerView: "auto",
+  spaceBetween: 55,
+  navigation: {
+    nextEl: '.history-button-next',
+  },
+  breakpoints: {
+    320: {
+      spaceBetween: 5,
+    },
+    500: {
+      slidesPerView: 55,
+    }
+  },
+  loop: false,
+});
+
 if (document.querySelector(".photo-slider")) {
   if (document.querySelectorAll(".photo-slider__item").length > 1) {
     let photoSlider = new Swiper('.photo-slider', {

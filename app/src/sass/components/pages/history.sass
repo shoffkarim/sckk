@@ -1,0 +1,115 @@
+.history
+  &-title
+    font-size: 16px
+    line-height: 24px
+    font-weight: 400
+    color: #000
+    text-align: center
+    margin-bottom: 34px
+  &-slider
+    overflow: hidden
+    width: calc(100% - 60px)
+    height: 198px
+    padding-left: 63px
+    margin-top: 88px
+    margin-bottom: 200px
+    position: relative
+    @media screen and ( max-width: 767px )
+      width: 100%
+    @media screen and ( max-width: 500px )
+      width: 100%
+      padding-left: 20px
+    &::before
+      content: ""
+      width: 100%
+      height: 1px
+      background-color: rgba(0,123,53,1)
+      position: absolute
+      top: calc(50% - 0.5px)
+      left: 0
+    &::after
+      content: ""
+      width: 105px
+      height: 100%
+      display: block
+      background: linear-gradient(270deg, #FFFFFF 60.38%, rgba(255, 255, 255, 0) 100%)
+      position: absolute
+      top: 0px
+      right: -10px
+      z-index: 2
+      @media screen and ( max-width: 500px )
+        display: none
+  &-slide
+    width: 75px
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    position: relative
+    &:nth-child(even)
+      justify-content: flex-end
+      .history-slide__line
+        &::before
+          transform: rotate(180deg)
+          top: 1px
+    &:first-child
+      .history-slide__line
+        &::after
+          content: ""
+          width: 7px
+          height: 7px
+          display: block
+          border-radius: 50%
+          background-color: rgba(0,123,53,1)
+          position: absolute
+          top: calc(50% - 3.5px)
+          left: -63px
+          @media screen and ( max-width: 500px )
+            left: -20px
+    &__href
+      &:hover
+        .history-slide__year
+          color: rgba(0,123,53,1)
+          transition: all 0.4s
+    &__year
+      font-size: 28px
+      line-height: 36px
+      font-weight: 700
+      color: #000
+      transition: all 0.4s
+    &__line
+      width: 100%
+      height: 1px
+      background-color: rgba(0,123,53,1)
+      position: absolute
+      top: calc(50% - 0.5px)
+      left: 0
+      &::before
+        content: ""
+        width: 11px
+        height: 11px
+        display: block
+        background-image: url(/app/build/img/history/triangle.svg)
+        background-repeat: no-repeat
+        background-size: cover
+        position: absolute
+        top: -11px
+        left: calc(50% - 5.5px)
+  &-button-next
+    display: block
+    width: 38px
+    height: 30px
+    position: absolute
+    top: calc(50% - 15px)
+    right: 0px
+    z-index: 10
+    outline: none
+    cursor: pointer
+    @media screen and ( max-width: 500px )
+      display: none
+    path
+      stroke: #000
+      transition: all 0.4s
+    &:hover
+      path
+        stroke: $green
+        transition: all 0.4s
