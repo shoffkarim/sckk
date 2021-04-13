@@ -1,4 +1,4 @@
-.history
+.history //page timeline
   &-title
     font-size: 16px
     line-height: 24px
@@ -113,6 +113,7 @@
       path
         stroke: $green
         transition: all 0.4s
+//page list
 .history
   &-list
     margin-top: 50px
@@ -165,3 +166,61 @@
         margin-right: 20px
         &:nth-child(3n)
           margin-right: 0px
+
+
+//popup
+.history
+  &-popup
+    width: 1130px
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    background-color: rgba(243,248,244,1)
+    padding: 55px 0px 140px
+    &__wrapper
+      height: 100%
+      overflow-y: hidden
+    &__scroller
+      padding-left: 165px
+      margin-right: 20px
+      overflow-y: auto
+      height: 100%
+      padding-bottom: 140px
+      &::-webkit-scrollbar
+        width: 6px
+        height: 8px
+        background-color: rgba(219,236,225,1)
+      &::-webkit-scrollbar-thumb
+        background-color: rgba(0,123,53,1)
+      &::-webkit-scrollbar-thumb:hover
+        background-color: rgba(0,123,53,1)
+    &__text
+      max-width: 700px
+      margin-top: 27px
+      height: 100%
+    &__year
+      color: #000
+      font-size: 86px
+      line-height: 111px
+      font-weight: 700
+      text-align: center
+      position: relative
+      padding-right: 80px
+      &::before, &::after
+        content: ""
+        display: block
+        width: 97px
+        height: 11px
+        position: absolute
+        top: calc(50% - 5.5px)
+        background-image: url(/app/build/img/three-line.png)
+        background-repeat: no-repeat
+        background-size: contain
+      &::after
+        right: 197px
+        transform: rotate(180deg)
+      &::before
+        left: 122px
+
+
