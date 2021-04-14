@@ -1,0 +1,246 @@
+.feedback
+  &-title
+    text-align: center
+  &-form
+    margin-top: 58px
+    .fake-checkbox
+      width: 50%
+      &__text
+        font-size: 18px
+        line-height: 26px
+        font-weight: 400
+        color: #000
+      &__box
+        border: 1px solid rgba(196,196,196,1)
+      input:checked + .fake-checkbox__box
+        border: 1px solid #007b35
+      label
+        cursor: pointer
+    &__bottom
+      margin-top: 50px
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      .fake-checkbox
+        width: auto
+        &__text
+          font-size: 13px
+          line-height: 24px
+          font-weight: 400
+          color: #000
+
+.feedback-block
+  margin-top: 64px
+  &:first-child
+    margin-top: 0px
+  &__name
+    font-size: 18px
+    line-height: 24px
+    font-weight: 700
+    color: #000
+  &__wrapper
+    margin-top: 20px
+    + .feedback-block__wrapper
+      margin-top: 64px
+
+    &.row
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+  &__input
+    width: 100%
+    margin-top: 14px
+    + .feedback-block__input
+      margin-top: 34px
+    + .feedback-block__textarea
+      margin-top: 34px
+    input
+      width: 100%
+      font-size: 18px
+      line-height: 24px
+      font-weight: 400
+      color: #000
+      padding: 13px 18px 12px
+      border: 1px solid rgba(196, 196, 196, 1)
+      transition: all 0.4s
+      &.error
+        border: 1px solid red
+        transition: all 0.4s
+      &::placeholder
+        font-size: 18px
+        line-height: 24px
+        font-weight: 400
+        color: rgba(196, 196, 196, 1)
+    label
+      cursor: pointer
+  &__textarea
+    width: 100%
+    textarea
+      width: 100%
+      font-size: 18px
+      line-height: 24px
+      font-weight: 400
+      color: #000
+      padding: 13px 18px 12px
+      border: 1px solid rgba(196, 196, 196, 1)
+      transition: all 0.4s
+      resize: none
+      min-height: 135px
+      &.error
+        border: 1px solid red
+        transition: all 0.4s
+      &::placeholder
+        font-size: 18px
+        line-height: 24px
+        font-weight: 400
+        color: rgba(196, 196, 196, 1)
+
+.radio-label
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: flex-start
+  margin-bottom: 17px
+  cursor: pointer
+  width: 50%
+  input
+    display: none
+    &:checked
+      + .fake-radio
+          border: 1px solid rgba(196,196,196,0)
+          transition: all 0.4s
+          &::after
+            opacity: 1
+            transition: all 0.4s
+          &::before
+            opacity: 1
+            transition: all 0.4s
+  .fake-radio
+    display: block
+    width: 24px
+    height: 24px
+    min-width: 24px
+    min-height: 24px
+    border-radius: 50%
+    border: 1px solid rgba(196,196,196,1)
+    margin-right: 10px
+    position: relative
+    transition: all 0.4s
+    &::after
+      content: ""
+      width: 24px
+      height: 24px
+      position: absolute
+      top: 0
+      left: -1px
+      background-color: rgba(0,123,53,1)
+      opacity: 0
+      border-radius: 50%
+      transition: all 0.4s
+    &::before
+      content: ""
+      width: 6px
+      height: 6px
+      position: absolute
+      top: calc(50% - 2px)
+      left: calc(50% - 3px)
+      background-color: rgba(255, 255, 255, 1)
+      opacity: 0
+      border-radius: 50%
+      z-index: 2
+      transition: all 0.4s
+  p
+    font-size: 18px
+    line-height: 26px
+    font-weight: 400
+    color: #000
+    max-width: 300px
+
+.input-label
+  font-size: 12px
+  line-height: 22px
+  font-weight: 700
+  letter-spacing: 1px
+  color: #000
+  text-transform: uppercase
+  margin-bottom: 9px
+  display: block
+
+.custom-select
+  position: relative
+  width: 410px
+  &__active
+    display: block
+    width: 100%
+    padding: 13px 17px
+    color: #000
+    font-size: 18px
+    line-height: 24px
+    font-weight: 400
+    position: relative
+    border: 1px solid rgba(196,196,196,1)
+    cursor: pointer
+    &::after
+      content: ""
+      width: 21px
+      height: 21px
+      background-image: url(/app/build/img/select-arrow.svg)
+      background-repeat: no-repeat
+      background-size: contain
+      position: absolute
+      top: calc(50% - 6px)
+      right: 18px
+  &__dropdown
+    position: absolute
+    top: 52px
+    left: 0px
+    width: 100%
+    border: 1px solid rgba(196,196,196,1)
+    border-top: none
+    padding-right: 17px
+    z-index: 100
+    background-color: #fff
+    height: 0%
+    opacity: 0
+    visibility: hidden
+    transition: all 0.4s
+    &.open-dropdown
+      height: 362px
+      opacity: 1
+      visibility: visible
+      transition: all 0.4s
+      .custom-select__list
+        height: 362px
+        opacity: 1
+        visibility: visible
+        transition: all 0.4s
+  &__list
+    overflow-y: auto
+    height: 0%
+    opacity: 0
+    visibility: hidden
+    transition: all 0.4s
+    &::-webkit-scrollbar
+      width: 6px
+      height: 8px
+      background-color: rgba(219,236,225,1)
+      margin-top: 10px
+    &::-webkit-scrollbar-thumb
+      background-color: rgba(0,123,53,1)
+    &::-webkit-scrollbar-thumb:hover
+      background-color: rgba(0,123,53,1)
+  &__item
+    color: #000
+    font-size: 18px
+    line-height: 24px
+    font-weight: 400
+    padding: 13px 17px
+    cursor: pointer
+    background-color: #fff
+    transition: all 0.4s
+    &:hover
+      background-color: $lightGreen
+      color: #fff
+      transition: all 0.4s
+  input
+    display: none
