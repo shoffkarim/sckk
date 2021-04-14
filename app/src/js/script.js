@@ -11,6 +11,7 @@ import Logo from "./modules/logo";
 import Video from "./modules/video";
 import Seo from "./modules/seo";
 import CustomSelect from "./modules/custom-select";
+import DiffAnswer from './modules/diff-answer';
 
 const burger = new Burger();
 const popup = new Popup();
@@ -21,7 +22,7 @@ const logo = new Logo();
 const video = new Video();
 const seo = new Seo();
 const select = new CustomSelect();
-
+const diffanswer = new DiffAnswer();
 // SWIPER
 // eslint-disable-next-line no-unused-vars
 let mainSlider = new Swiper('.main-slider', {
