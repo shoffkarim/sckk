@@ -10,6 +10,7 @@ import Cookie from "./modules/cookie";
 import Logo from "./modules/logo";
 import Video from "./modules/video";
 import Seo from "./modules/seo";
+import CustomSelect from "./modules/custom-select";
 
 const burger = new Burger();
 const popup = new Popup();
@@ -19,6 +20,7 @@ const cookie = new Cookie();
 const logo = new Logo();
 const video = new Video();
 const seo = new Seo();
+const select = new CustomSelect();
 
 // SWIPER
 // eslint-disable-next-line no-unused-vars
