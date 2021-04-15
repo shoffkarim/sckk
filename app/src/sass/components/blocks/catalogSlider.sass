@@ -10,6 +10,8 @@
     overflow-x: hidden
   .slider-item
     overflow: hidden
+    @media screen and ( max-width: 500px )
+      overflow: inherit
     &:first-child
       .slider-item__wrapper
         &::before
@@ -17,10 +19,13 @@
     .slider-item__wrapper
       &::before
         top: -70px
-        left: auto
-        right: 100px
+        right: auto
+        left: 300px
         z-index: 10
         transform: rotate(180deg)
+        @media screen and ( max-width: 767px )
+          right: 80px
+          left: auto
         @media screen and ( max-width: 500px )
           width: 70px
           height: 83px
@@ -29,6 +34,7 @@
       padding-left: 117px
       padding-top: 378px
       text-transform: uppercase
+      flex-direction: column
       @media screen and ( max-width: 1560px )
         padding-left: 40px
         padding-top: 300px
@@ -69,8 +75,6 @@
         left: 0
         opacity: 1
         transition: all 0.4s
-        @media screen and (max-width: 1200px)
-          display: none
       span
         font-size: 56px
         line-height: 62px
@@ -194,6 +198,32 @@
   display: none
   @media screen and (max-width: 1200px)
     display: flex
+
+.slider-item__list
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  max-width: 660px
+  justify-content: space-between
+  margin-top: 100px
+  @media screen and ( max-width: 767px )
+    display: none
+.slider-item__link
+  width: 50%
+  margin-bottom: 20px
+  a
+    font-size: 18px
+    line-height: 24px
+    color: #fff
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+    text-transform: none
+    transition: all 0.4s
+    &:hover
+      border-bottom: 1px solid rgba(255, 255, 255, 0)
+      transition: all 0.4s
+
+
+
 @keyframes CircleRotate
   0%
     transform: rotate(0deg)

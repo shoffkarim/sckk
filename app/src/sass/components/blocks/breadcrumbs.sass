@@ -1,12 +1,23 @@
 .breadcrumbs
   margin: 0 auto
   text-align: center
+  overflow-x: hidden
   &-list
     display: flex
     flex-direction: row
     justify-content: center
     align-items: baseline
+    width: 100%
+    overflow-x: auto
+    padding-bottom: 20px
+    margin-bottom: -20px
   &-item
+    margin-left: 23px
+    white-space: nowrap
+    &:last-child
+      margin-right: 20px
+    &:first-child
+      margin-left: 40px
     a
       font-size: 13px
       line-height: 19px
@@ -14,7 +25,6 @@
       color: $green
       border-bottom: 1px solid rgba(0,123,53,0.2)
       position: relative
-      margin-right: 23px
       transition: all 0.4s
       &:hover
         border-bottom: 1px solid rgba(0,123,53,0)
