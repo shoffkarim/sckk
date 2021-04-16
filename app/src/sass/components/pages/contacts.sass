@@ -1,0 +1,177 @@
+.contacts
+  width: 100%
+  padding: 0px 120px 140px 120px
+  position: relative
+  @media screen and ( max-width: 1366px )
+    padding: 0px 40px 140px 40px
+  &-info
+    max-width: 680px
+    @media screen and ( max-width: 1200px )
+      max-width: none
+    &__wiz
+      margin-top: 19px
+    &__wrapper
+      display: flex
+      margin-top: 55px
+      @media screen and ( max-width: 1200px )
+        justify-content: space-between
+      @media screen and ( max-width: 650px )
+        flex-wrap: wrap
+        margin-top: 0px
+    &__block
+      min-width: 275px
+      width: 100%
+      margin-right: 140px
+      @media screen and ( max-width: 1200px )
+        min-width: auto
+        width: calc(50% - 20px)
+        margin-right: auto
+      @media screen and ( max-width: 650px )
+        width: 100%
+        margin-top: 30px
+
+  &-name
+    font-size: 18px
+    line-height: 26px
+    font-weight: 700
+    color: #000
+  &-director
+    margin-bottom: 78px
+    @media screen and ( max-width: 650px )
+      margin-bottom: 0px
+    &__img
+      width: 130px
+      height: 130px
+      border-radius: 50%
+      overflow: hidden
+      margin-bottom: 30px
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &__position
+      margin-top: 7px
+
+.map
+  &-container
+    width: auto
+    height: auto
+    position: absolute
+    top: -250px
+    right: 0
+    &::before, &::after
+      content: ""
+      display: block
+      position: absolute
+      background-repeat: no-repeat
+      background-size: cover
+      @media screen and ( max-width: 1200px )
+        display: none
+    &::after
+      width: 140px
+      height: 35px
+      background-image: url(/app/build/img/7.png)
+      bottom: 125px
+      right: calc(50% - 120px)
+      @media screen and ( max-width: 1560px )
+        bottom: -65px
+    &::before
+      width: 183px
+      height: 35px
+      background-image: url(/app/build/img/triangles-patten.png)
+      top: calc(50% - 275px)
+      left: -95px
+      @media screen and ( max-width: 1560px )
+        top: calc(50% - 200px)
+
+    @media screen and ( max-width: 1560px )
+      top: -180px
+    @media screen and ( max-width: 1200px )
+      position: relative
+      top: auto
+      right: auto
+      margin-top: 140px
+  &-wrapper
+    -webkit-clip-path: polygon(100% 0%,100% 100%,0% 50%)
+    clip-path: polygon(100% 0%,100% 100%,0% 50%)
+    width: 1140px
+    height: auto
+    position: relative
+    overflow: hidden
+    @media screen and ( max-width: 1850px )
+      width:1050px
+      height: 1115px
+    @media screen and ( max-width: 1700px )
+      width: 900px
+      height: 985px
+    @media screen and ( max-width: 1560px )
+      width: 780px
+      height: 825px
+    @media screen and ( max-width: 1200px )
+      width: 100%
+      height: auto
+      clip-path: none
+      -webkit-clip-path: none
+    #map
+      width: 1140px
+      height: 1200px
+      @media screen and ( max-width: 1850px )
+        width:1050px
+        height: 1115px
+      @media screen and ( max-width: 1700px )
+        width: 900px
+        height: 985px
+      @media screen and ( max-width: 1560px )
+        width: 780px
+        height: 825px
+      @media screen and ( max-width: 1200px )
+        width: 100% !important
+        height: 400px
+      @media screen and ( max-width: 450px )
+        height: 250px
+  &-button
+    -webkit-clip-path: polygon(0% 0,100% 50%,0 100%)
+    clip-path: polygon(0% 0,100% 50%,0 100%)
+    background-color: rgba(243, 248, 244, 1)
+    width: 183px
+    height: 201px
+    position: absolute
+    top: calc(50% +150px)
+    left: 240px
+    transition: all 0.5s
+    &:hover
+      background-color: $lightGreen
+      transition: all 0.5s
+      p
+        color: #fff
+        transition: all 0.5s
+    @media screen and ( max-width: 1560px )
+      bottom: 10px
+      top: auto
+      left: calc(50% - 40px)
+    @media screen and ( max-width: 1200px )
+      position: relative
+      bottom: auto
+      left: auto
+      clip-path: none
+      -webkit-clip-path: none
+      width: auto
+      height: auto
+      background-color: #fff
+      margin-top: 30px
+    button
+      width: 100%
+      height: 100%
+      @media screen and ( max-width: 1200px )
+        width: auto
+        height: auto
+        background-color: rgba(243, 248, 244, 1)
+      p
+        padding: 76px 88px 77px 30px
+        font-size: 16px
+        line-height: 24px
+        font-weight: 400
+        color: #000
+        transition: all 0.5s
+        @media screen and ( max-width: 1200px )
+          padding: 20px 40px
