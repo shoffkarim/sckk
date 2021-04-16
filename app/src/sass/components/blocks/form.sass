@@ -1,4 +1,17 @@
 .form
+  &-wrapper
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin-bottom: 23px
+    @media screen and (max-width: 650px)
+      margin-bottom: 0px
+      flex-direction: column
+    .form-block
+      &:nth-child(2n)
+        margin-left: 30px
+        @media screen and (max-width: 650px)
+          margin-left: 0px
   &-block
     width: 100%
     @media screen and (max-width: 650px)
@@ -24,6 +37,17 @@
       &.error
         border: 1px solid red
         transition: all 0.4s
+    &__textarea
+      font-size: 18px
+      line-height: 24px
+      font-weight: 400
+      color: #000
+      padding: 13px 18px 12px
+      border: 1px solid rgba(196, 196, 196, 1)
+      width: 100%
+      transition: all 0.4s
+      min-height: 92px
+      resize: none
     .star
       color: $green
 
@@ -75,6 +99,23 @@
         path,circle
           stroke: $darkGreen
           transition: all 0.4s
+  &-subtitle
+    font-size: 16px
+    line-height: 24px
+    font-weight: 700
+    text-align: left
+    margin-bottom: 18px
+  &-bottom
+    margin-top: 30px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    @media screen and (max-width: 650px)
+      margin-top: 0px
+      flex-direction: column
+  &__button
+    @media screen and (max-width: 650px)
+      margin-top: 20px
 .popup-close__thanks
   font-size: 16px
   line-height: 19px
@@ -140,3 +181,58 @@
   + .fake-checkbox__box
     border: 1px solid red
     transition: all 0.4s
+
+.fake-file
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: center
+  @media screen and ( max-width: 650px )
+    flex-direction: column
+    align-items: flex-start
+  &__label
+    font-size: 16px
+    line-height: 24px
+    color: #000
+    padding: 13px 40px
+    background-color: rgba(196, 196, 196, 0.2)
+    display: block
+    margin-right: 24px
+    cursor: pointer
+    max-width: 220px
+    overflow: hidden
+    white-space: pre
+    text-overflow: ellipsis
+    @media screen and ( max-width: 650px )
+      margin-bottom: 15px
+  input
+    display: none
+  &__info
+    p
+      font-size: 13px
+      line-height: 24px
+      font-weight: 400
+      color: rgba(196, 196, 196, 1)
+  &__delete
+    padding-left: 18px
+    position: relative
+    display: none
+    cursor: pointer
+    &::before
+      content: ""
+      width: 10px
+      height: 10px
+      background-image: url(/app/build/img/delete.svg)
+      background-repeat: no-repeat
+      background-size: cover
+      position: absolute
+      top: 6px
+      left: 0
+  &.file-loaded
+    .fake-file__desc
+      display: none
+    .fake-file__delete
+      display: block
+
+
+

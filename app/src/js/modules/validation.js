@@ -65,6 +65,19 @@ class Validation {
                 j.classList.remove("error");
               }
               break;
+            case "date":
+              // eslint-disable-next-line no-case-declarations
+              let regDate = new RegExp(/^\d{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$/);
+              if (!regDate.test(value)) {
+                j.classList.add("error");
+                j.classList.remove("good");
+                e.preventDefault();
+              } else {
+                j.classList.add("good");
+                j.classList.remove("error");
+              }
+              console.log(value);
+              break;
             default:
               break;
           }

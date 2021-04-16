@@ -12,6 +12,7 @@ import Video from "./modules/video";
 import Seo from "./modules/seo";
 import CustomSelect from "./modules/custom-select";
 import DiffAnswer from './modules/diff-answer';
+import FileInput from './modules/file-input';
 
 const burger = new Burger();
 const popup = new Popup();
@@ -23,6 +24,7 @@ const video = new Video();
 const seo = new Seo();
 const select = new CustomSelect();
 const diffanswer = new DiffAnswer();
+const fakefile = new FileInput();
 // SWIPER
 // eslint-disable-next-line no-unused-vars
 let mainSlider = new Swiper('.main-slider', {
