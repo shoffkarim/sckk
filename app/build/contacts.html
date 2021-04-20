@@ -724,7 +724,7 @@
           </div>
         </div>
         <div class="map-container">
-          <div class="map-wrapper">
+          <div class="map-wrapper js-lazy-map">
             <div id="map"></div>
           </div>
           <div class="map-button">
@@ -1359,25 +1359,41 @@
 <script src="js/swiper.min.js"></script>
 <script src="js/imask.js"></script>
 <script src="js/script.js"></script>
-<script type="text/javascript">
-  ymaps.ready(init);
-  function init(){
-    var myMap = new ymaps.Map("map", {
-    center: [52.025391, 106.872807],
-    zoom: 13
+<script>
+  const mapWrap = document.querySelector(".js-lazy-map")
+  mapWrap.addEventListener('click',function (){
+    ymaps.ready(ymapsInit);
+  });
+  mapWrap.addEventListener('mouseover',function (){
+    ymaps.ready(ymapsInit);
+  });
+  mapWrap.addEventListener('touchstart',function (){
+    ymaps.ready(ymapsInit);
+  });
+  mapWrap.addEventListener('touchmove',function (){
+    ymaps.ready(ymapsInit);
+  });
+  function ymapsInit() {
+    const myMap = new ymaps.Map("map", {
+      center: [52.025391, 106.872807],
+      zoom: 13,
     });
-    var myPlacemar1 = new ymaps.Placemark([52.025391, 106.872807], {
-      hintContent: '',
-      iconContent: ''
-    }, {
-      iconLayout: 'default#imageWithContent',
-      iconImageHref: 'img/pin.svg',
-      iconImageSize: [64, 55],
-      iconContentOffset: [19, 15],
-    });
-    myMap.geoObjects.add(myPlacemar1)
+    // eslint-disable-next-line no-undef
+    const myPlacemar1 = new ymaps.Placemark(
+      [52.025391, 106.872807],
+      {
+        hintContent: "",
+        iconContent: "",
+      },
+      {
+        iconLayout: "default#imageWithContent",
+        iconImageHref: "img/pin.svg",
+        iconImageSize: [64, 55],
+        iconContentOffset: [19, 15],
+      }
+    );
+    myMap.geoObjects.add(myPlacemar1);
   }
-
 
 </script>
 </html>

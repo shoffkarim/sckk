@@ -25,6 +25,7 @@ const seo = new Seo();
 const select = new CustomSelect();
 const diffanswer = new DiffAnswer();
 const fakefile = new FileInput();
+
 // SWIPER
 // eslint-disable-next-line no-unused-vars
 let mainSlider = new Swiper('.main-slider', {
