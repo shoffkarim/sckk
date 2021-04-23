@@ -17,6 +17,7 @@
   position: relative
   @media screen and ( max-width: 767px )
     width: 100%
+    margin-bottom: 40px
   &::before, &::after
     content: ""
     position: absolute
@@ -77,6 +78,8 @@
     object-fit: cover
     z-index: 1
     position: relative
+  &__arrow
+    transition: all 0.4s
   &__wrapper
     position: absolute
     top: 46px
@@ -89,6 +92,10 @@
     @media screen and ( max-width: 500px )
       left: 20px
       top: 20px
+    &:hover
+      .catalog-item__arrow
+        opacity: 0.5
+        transition: all 0.4s
   &__name
     font-size: 24px
     line-height: 30px

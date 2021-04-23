@@ -79,6 +79,18 @@
 .glightbox-clean .gclose
   @media (min-width: 992px)
     opacity: 1
+
+
+.glightbox-clean .gnext, .glightbox-clean .gprev
+  @media (max-width: 768px)
+    top: calc(90% - 25px)
+.glightbox-clean .gnext
+  @media (max-width: 768px)
+    right: calc(50% - 40px)
+.glightbox-clean .gprev
+  @media (max-width: 768px)
+    left: calc(50% - 40px)
+
 // .glightbox-clean .gnext path, .glightbox-clean .gprev path
 //   display: none
 // .glightbox-clean .gnext svg, .glightbox-clean .gprev svg
