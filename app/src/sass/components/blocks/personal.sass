@@ -53,6 +53,8 @@
       flex-direction: row
       flex-wrap: wrap
       @media screen and ( max-width: 500px )
+        justify-content: space-between
+      @media screen and ( max-width: 439px )
         justify-content: center
     &__item
       width: calc(100% / 3)
@@ -66,9 +68,9 @@
       @media screen and ( max-width: 1200px )
         width: 50%
       @media screen and ( max-width: 500px )
-        width: 280px
+        width: 200px
         height: auto
-        margin-bottom: 20px
+        margin-bottom: 30px
 
       img
         object-fit: none

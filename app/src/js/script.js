@@ -93,22 +93,6 @@ let aboutSlider = new Swiper('.about-slider', {
     }
   }
 });
-let newsSlider = new Swiper('.news-slider', {
-  slidesPerView: 2,
-  navigation: {
-    nextEl: '.news-button-next',
-    prevEl: '.news-button-prev',
-  },
-  loop: true,
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-    },
-    768: {
-      slidesPerView: 2,
-    }
-  }
-});
 
 let historySlider = new Swiper('.history-slider', {
   slidesPerView: "auto",

@@ -7,7 +7,7 @@
     // @media screen and ( max-width: 900px )
     //   padding-top: 0px
     .section-top
-      margin-bottom:39px
+      margin-bottom: 39px
     &__container
       padding-bottom: 215px
       @media screen and ( max-width: 1366px )
@@ -30,7 +30,7 @@
     align-items: center
     width: calc(100% / 3)
     border: 1px solid #F0F0F0
-    border-left: 1px solid transparent
+    border-right: 1px solid transparent
     margin-top: -1px
     background-color: transparent
     transition: all 0.4s
@@ -40,8 +40,8 @@
       border-top: 1px solid transparent
       &:first-child
         border-top: 1px solid #F0F0F0
-    &:first-child
-      border-left: 1px solid #F0F0F0
+    &:nth-child(3n)
+      border-right: 1px solid #F0F0F0
     &:hover
       background-color: $lightGreen
       border: 1px solid $lightGreen
@@ -78,7 +78,7 @@
       width: 100%
       height: 100%
       object-fit: cover
-      margin-bottom:30px
+      margin-bottom: 30px
       @media screen and ( max-width: 1200px )
         max-width: 200px
         max-height: 200px
@@ -120,103 +120,88 @@
       @media screen and ( max-width: 900px )
         font-size: 14px
         line-height: 18px
-  &-slider
+  &-banner
+    display: flex
+    flex-direction: row
+    justify-content: center
+    width: 100%
     &__container
-      max-width:1206px
+      max-width: 1206px
       margin: 0px auto 70px
       overflow: hidden
       position: relative
-      @media screen and ( max-width: 1320px )
-        max-width: 1000px
-      @media screen and ( max-width: 1100px )
-        max-width: 700px
-    .news-button-prev
-      position: absolute
-      bottom: 98px
-      left: 93px
-      transform: rotate(180deg)
-      z-index: 2
-      cursor: pointer
-      @media screen and ( max-width: 1320px )
-        left: 50px
-      @media screen and ( max-width: 1100px )
-        left: 25px
-        bottom: auto
-        top: 15px
-      &::after
-        content: ""
-        width: 38px
-        height: 29px
-        display: block
-        background-image: url(/app/build/img/pagination-arrow.png)
-        background-repeat: no-repeat
-        background-size: cover
-
-    .news-button-next
-      position: absolute
-      bottom: 98px
-      right: 93px
-      z-index: 2
-      cursor: pointer
-      @media screen and ( max-width: 1320px )
-        right: 50px
-      @media screen and ( max-width: 1100px )
-        right: 25px
-        bottom: auto
-        top: 15px
-      &::after
-        content: ""
-        width: 38px
-        height: 29px
-        display: block
-        background-image: url(/app/build/img/pagination-arrow.png)
-        background-repeat: no-repeat
-        background-size: cover
-  &-slide
-    border: 1px solid #F0F0F0
-    padding: 45px 50px 43px 228px
-    transition: all 0.2s
-    height: auto
-    @media screen and ( max-width: 1320px )
-      padding: 45px 50px 43px 125px
-    @media screen and ( max-width: 1100px )
-      padding: 45px 25px 43px 50px
-    @media screen and ( max-width: 767px )
-      padding: 60px 25px 25px 25px
-    &.swiper-slide-active
-      padding: 45px 50px 43px 228px
-      transition: all 0.2s
-      @media screen and ( max-width: 1320px )
-        padding: 45px 50px 43px 125px
-      @media screen and ( max-width: 1100px )
-        padding: 45px 25px 43px 50px
+      @media screen and ( max-width: 1366px )
+        padding: 0px 20px
       @media screen and ( max-width: 767px )
-        padding: 60px 25px 25px 25px
-    &.swiper-slide-next
+        display: none
+    &__item
+      border: 1px solid #F0F0F0
       padding: 45px 228px 43px 50px
-      transition: all 0.2s
-      @media screen and ( max-width: 1320px )
-        padding: 45px 125px 43px 50px
+      transition: all 0.4s
+      height: auto
+      background-color: #fff
+      position: relative
+      width: 50%
+      &:first-child
+        padding: 45px 50px 43px 228px
+        border-right: none
+        .news-banner__arrow
+          transform: rotate(180deg)
+          left: 95px
+          right: auto
+      &:hover
+        background-color: $lightGreen
+        transition: all 0.4s
+        .news-banner__href
+          color: #fff
+          transition: all 0.4s
+        .news-banner__heading
+          color: #fff
+          transition: all 0.4s
+        .news-item__date
+          span
+            color: #fff
+            transition: all 0.4s
+          svg
+            path, line, rect
+              stroke: #fff
+              transition: all 0.4s
+        .news-banner__arrow
+          path
+            stroke: #fff
+            transition: all 0.4s
       @media screen and ( max-width: 1100px )
-        padding: 45px 50px 43px 25px
-      @media screen and ( max-width: 767px )
-        padding: 60px 25px 25px 25px
-    .news-item__date
-      text-align: left
-      margin-top: 23px
+        padding: 25px
+        &:first-child
+          padding: 25px
+      .news-item__date
+        text-align: left
+        margin-top: 23px
+        transition: all 0.4s
     &__href
       font-size: 16px
       line-height: 24px
       font-weight: 400
       color: $green
+      transition: all 0.4s
     &__heading
       font-size: 20px
       line-height: 30px
       font-weight: 500
       color: #000
       max-width: 325px
+      transition: all 0.4s
       @media screen and ( max-width: 500px )
         font-size: 16px
         line-height: 24px
-
-
+    &__arrow
+      width: 38px
+      height: 30px
+      position: absolute
+      top: calc(50% - 15px)
+      right: 95px
+      path
+        stroke: #000
+        transition: all 0.4s
+      @media screen and ( max-width: 1100px )
+        display: none

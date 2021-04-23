@@ -13,7 +13,7 @@
     padding-left: 63px
     margin-top: 88px
     margin-bottom: 200px
-    position: relative
+    position: unset
     @media screen and ( max-width: 767px )
       width: 100%
     @media screen and ( max-width: 500px )
@@ -22,23 +22,13 @@
     &::before
       content: ""
       width: 100%
-      height: 1px
+      height: 2px
       background-color: rgba(0,123,53,1)
       position: absolute
       top: calc(50% - 0.5px)
       left: 0
-    &::after
-      content: ""
-      width: 105px
-      height: 100%
-      display: block
-      background: linear-gradient(270deg, #FFFFFF 60.38%, rgba(255, 255, 255, 0) 100%)
-      position: absolute
-      top: 0px
-      right: -10px
-      z-index: 2
-      @media screen and ( max-width: 500px )
-        display: none
+    &__limiter
+      position: relative
   &-slide
     width: 75px
     display: flex
@@ -95,25 +85,55 @@
         position: absolute
         top: -11px
         left: calc(50% - 5.5px)
-  &-button-next
-    display: block
+  &-button-next, &-button-prev
     width: 38px
-    height: 30px
+    height: 100%
     position: absolute
-    top: calc(50% - 15px)
+    top: calc(0%)
     right: 0px
     z-index: 10
     outline: none
     cursor: pointer
+    display: flex
+    align-items: center
+    opacity: 1
+    transition: all 0.2s
+    &::before
+      content: ""
+      width: 105px
+      height: 100%
+      display: block
+      background: linear-gradient(270deg, #FFFFFF 60.38%, rgba(255, 255, 255, 0) 100%)
+      position: absolute
+      top: 0px
+      right: -10px
+      z-index: 2
+      @media screen and ( max-width: 500px )
+        display: none
     @media screen and ( max-width: 500px )
-      display: none
+      height: 38px
+      bottom: -50px
+      top: auto
+      right: calc(50% - 50px)
     path
       stroke: #000
       transition: all 0.4s
+    svg
+      z-index: 3
     &:hover
       path
         stroke: $green
         transition: all 0.4s
+  &-button-prev
+    left: 0px
+    transform: rotate(180deg)
+    @media screen and ( max-width: 500px )
+      left: calc(50% - 50px)
+      bottom: -51px
+.swiper-button-disabled
+  opacity: 0
+  @media screen and ( max-width: 500px )
+    opacity: 1
 //page list
 .history
   &-list
@@ -167,7 +187,6 @@
         margin-right: 20px
         &:nth-child(3n)
           margin-right: 0px
-
 
 //popup
 .history
