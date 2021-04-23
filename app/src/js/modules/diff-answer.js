@@ -12,11 +12,11 @@ class DiffAnswer {
         const radios = i.querySelectorAll(`input[name=${name}]`);
         radios.forEach((j) => j.addEventListener("change", function () {
           if (j.parentElement.parentElement.classList.contains("js-diff-answer")) {
-            const wrap = container.querySelector(".js-diff-answer");
+            const wrap = i.querySelector(".js-diff-answer");
             const input = wrap.querySelector(".js-diff-input");
             input.classList.add("open");
           } else {
-            const wrap = container.querySelector(".js-diff-answer");
+            const wrap = i.querySelector(".js-diff-answer");
             const input = wrap.querySelector(".js-diff-input");
             input.classList.remove("open");
           }

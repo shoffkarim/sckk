@@ -14,7 +14,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=d6a72d57-eab5-4c9e-823c-de5ba4a8dda3&lang=ru_RU" type="text/javascript">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=d6a72d57-eab5-4c9e-823c-de5ba4a8dda3&lang=ru_RU"
+    type="text/javascript">
   </script>
 </head>
 
@@ -663,17 +664,19 @@
             <div class="contacts-director__img">
               <img src="img/contacts/director.jpg" alt="">
             </div>
-            <div class="contacts-name">
-              Деева Лилия Васильевна
-            </div>
-            <div class="contacts-director__position inner-text">
-              Генеральный директор
-            </div>
-            <div class="contacts-info__wiz wiziwig">
-              <p>+7 (30138) 74-2-02 (приёмная)<br>
-                +7 (30138) 73-7-91 (факс)<br>
-              <a href="mailto:sckk@sckkbur.ru">sckk@sckkbur.ru</a>
-              </p>
+            <div class="contacts-director__wrapper">
+              <div class="contacts-name">
+                Деева Лилия Васильевна
+              </div>
+              <div class="contacts-director__position inner-text">
+                Генеральный директор
+              </div>
+              <div class="contacts-info__wiz wiziwig">
+                <p>+7 (30138) 74-2-02 (приёмная)<br>
+                  +7 (30138) 73-7-91 (факс)<br>
+                  <a href="mailto:sckk@sckkbur.ru">sckk@sckkbur.ru</a>
+                </p>
+              </div>
             </div>
           </div>
           <div class="contacts-info__wrapper">
@@ -682,11 +685,11 @@
                 Отдел продаж
               </div>
               <div class="contacts-info__wiz wiziwig">
-                <p>	+7 (30138) 74-2-05 (тел/факс)<br>
-                +7 (30138) 73-4-40<br>
-                +7 (30138) 73-7-31 (факс)<br>
-                +7 (30138) 73-0-13<br>
-                <a href="mailto:sbyt@sckkbur.ru">sbyt@sckkbur.ru</a>
+                <p> +7 (30138) 74-2-05 (тел/факс)<br>
+                  +7 (30138) 73-4-40<br>
+                  +7 (30138) 73-7-31 (факс)<br>
+                  +7 (30138) 73-0-13<br>
+                  <a href="mailto:sbyt@sckkbur.ru">sbyt@sckkbur.ru</a>
                 </p>
               </div>
             </div>
@@ -696,13 +699,13 @@
               </div>
               <div class="contacts-info__wiz wiziwig">
                 <p>+7 (30138) 73-6-92 (факс)<br>
-                <a href="mailto:KIrinaA@sckkbur.ru">KIrinaA@sckkbur.ru</a>
+                  <a href="mailto:KIrinaA@sckkbur.ru">KIrinaA@sckkbur.ru</a>
                 </p>
                 <p>Специалисты по развитию и обучению персонала:</p>
-                  <p>+7(30138) 74-2-07 доб. 12-96<br>
+                <p>+7(30138) 74-2-07 доб. 12-96<br>
                   <a href="mailto:Yaannab@sckkbur.ru">Yaannab@sckkbur.ru</a><br>
                   <a href="mailto:Vmarinan@sckkbur.ru">Vmarinan@sckkbur.ru</a>
-                  </p>
+                </p>
               </div>
             </div>
           </div>
@@ -712,7 +715,8 @@
                 Отдел снабжения
               </div>
               <div class="contacts-info__wiz wiziwig">
-                <p>+7 (30138) 74-2-37<br>+7 (30138) 73-6-35 (факс)<br><a href="mailto:omts@sckkbur.ru">omts@sckkbur.ru</a></p>
+                <p>+7 (30138) 74-2-37<br>+7 (30138) 73-6-35 (факс)<br><a
+                    href="mailto:omts@sckkbur.ru">omts@sckkbur.ru</a></p>
               </div>
             </div>
             <div class="contacts-info__block">
@@ -1363,18 +1367,19 @@
 <script src="js/script.js"></script>
 <script>
   const mapWrap = document.querySelector(".js-lazy-map")
-  mapWrap.addEventListener('click',function (){
+  mapWrap.addEventListener('click', function () {
     ymaps.ready(ymapsInit);
   });
-  mapWrap.addEventListener('mouseover',function (){
+  mapWrap.addEventListener('mouseover', function () {
     ymaps.ready(ymapsInit);
   });
-  mapWrap.addEventListener('touchstart',function (){
+  mapWrap.addEventListener('touchstart', function () {
     ymaps.ready(ymapsInit);
   });
-  mapWrap.addEventListener('touchmove',function (){
+  mapWrap.addEventListener('touchmove', function () {
     ymaps.ready(ymapsInit);
   });
+
   function ymapsInit() {
     const myMap = new ymaps.Map("map", {
       center: [52.025391, 106.872807],
@@ -1382,12 +1387,10 @@
     });
     // eslint-disable-next-line no-undef
     const myPlacemar1 = new ymaps.Placemark(
-      [52.025391, 106.872807],
-      {
+      [52.025391, 106.872807], {
         hintContent: "",
         iconContent: "",
-      },
-      {
+      }, {
         iconLayout: "default#imageWithContent",
         iconImageHref: "img/pin.svg",
         iconImageSize: [64, 55],
@@ -1396,6 +1399,6 @@
     );
     myMap.geoObjects.add(myPlacemar1);
   }
-
 </script>
+
 </html>
