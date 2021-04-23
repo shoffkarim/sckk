@@ -14,17 +14,23 @@
       max-height: 1130px
     @media screen and (max-width:767px)
       max-height: none
+      display: none
   &-delimiter
+    margin-top: 40px
     border-bottom: 1px solid #207946
+    @media screen and (max-width:767px)
+      display: none
   &-bottom
     display: flex
     flex-direction: row
-    padding-top: 110px
-    padding-bottom: 110px
+    padding-top: 55px
+    padding-bottom: 55px
     @media screen and ( max-width: 1366px )
       flex-wrap: wrap
     @media screen and ( max-width: 1250px )
       justify-content: space-between
+    @media screen and (max-width:767px)
+      padding-top: 0px
     &__name
       font-size: 16px
       line-height: 22px
