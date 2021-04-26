@@ -1500,9 +1500,9 @@
     <div class="popup-container">
       <div class="popup-wrapper">
         <p class="popup-title">Заказать</p>
-        <p class="popup-subtitle">Картон гофрированный листовой</p>
+        <!-- <p class="popup-subtitle">Картон гофрированный листовой</p> -->
         <p class="popup-text">Заполните поля ниже и наши менеджеры свяжутся с вами для уточнения подробностей о вашем
-          заказе.Все поля обязательны для заполнения.</p>
+          заказе. Все поля обязательны для заполнения.</p>
       </div>
       <form class="popup-form">
         <div class="popup-form__wrapper">
@@ -1556,14 +1556,14 @@
       <form class="popup-form">
         <div class="popup-form__wrapper">
           <div class="popup-form__block form-block">
-            <label class="form-block__label">Ваше имя</label>
-            <input class="form-block__input" type="text"></input>
+            <label class="form-block__label">Ваше имя<span class="star">*</span></label>
+            <input class="form-block__input js-valid" type="text" data-req="true"></input>
           </div>
         </div>
         <div class="popup-form__wrapper">
           <div class="popup-form__block form-block">
-            <label class="form-block__label">Телефон</label>
-            <input class="form-block__input tel-mask" type="tel"></input>
+            <label class="form-block__label">Телефон<span class="star">*</span></label>
+            <input class="form-block__input tel-mask js-valid" type="tel" data-req="true"></input>
           </div>
         </div>
         <div class="popup-form__bottom">
