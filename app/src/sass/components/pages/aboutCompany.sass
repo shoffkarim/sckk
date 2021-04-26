@@ -7,7 +7,7 @@
     display: block
     @media screen and ( max-width: 500px )
       min-height: 300px
-      
+
   &__title
     padding-top: 140px
     padding-bottom: 42px
@@ -100,8 +100,7 @@
       height: 100%
       object-fit: cover
   &--sticky
-    height: 100vh
-    margin-right: -17px
+    min-height: 100vh
     @media screen and ( max-width: 1000px )
       height: auto
       margin-right: 0px
@@ -109,11 +108,11 @@
         width: 100%
       .two-blocks__wrapper--scoller
         width: 100%
+        position: relative
     .two-blocks__wrapper
-      width: calc(50% - 8px)
+      width: calc(50%)
     .two-blocks__wrapper--scoller
-      overflow-y: auto
-      width: calc(50% + 8px)
+      width: calc(50%)
 
 .two-blocks .numbers-list
   padding-top: 197px
@@ -307,13 +306,12 @@
           transform: rotate(180deg)
           left: 39px
 
-
 .geography-wrapper.about-geog
   max-width: 585px
   @media screen and ( max-width: 1200px )
     max-width: none
 .about-structure
-  padding:63px 260px 120px 120px
+  padding: 63px 260px 120px 120px
   background-color: #F3F8F4
   @media screen and ( max-width: 1560px )
     padding: 75px 75px 75px 80px
@@ -342,7 +340,7 @@
     @media screen and ( max-width: 1560px )
       padding-top: 100px
     @media screen and ( max-width: 1200px )
-        padding-top: 50px
+      padding-top: 50px
     .container
       max-width: 1600px
       @media screen and ( max-width: 1760px )
@@ -498,7 +496,7 @@
     @media screen and ( max-width: 1560px )
       padding-top: 100px
     @media screen and ( max-width: 767px )
-        padding-top: 50px
+      padding-top: 50px
     .container
       max-width: 1600px
       padding-right: 40px
@@ -515,7 +513,7 @@
       font-weight: 700
       font-size: 32px
       line-height: 36px
-      color:#000
+      color: #000
       max-width: 265px
       margin-right: 125px
       margin-top: 19px
@@ -534,7 +532,6 @@
         font-size: 25px
         line-height: 30px
         text-align: center
-
 
     &__wrapper
       display: flex
@@ -787,13 +784,6 @@
       max-width: 450px
       position: relative
 
-
-
-
-
-
-
-
 .eco
   &-item
     background-color: #fff
@@ -824,7 +814,6 @@
         top: -60px
         right: 40px
         max-width: 157px
-
 
 .img-links
   background-color: $darkGreen
@@ -919,7 +908,6 @@
         font-size: 16px
         line-height: 20px
 
-
 .about-button-prev
   position: absolute
   bottom: -68px
@@ -980,3 +968,59 @@
     display: flex
   @media screen and ( max-width: 767px )
     flex-direction: column-reverse
+
+.js-sticky
+  position: relative
+.js-sticky-control
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 1px
+.two-blocks--sticky.sticky
+  .two-blocks__wrapper
+    &:first-child
+      position: fixed
+      top: 0
+      bottom: auto
+      left: 0
+      width: calc(50% - 40px)
+      z-index: 100
+      @media screen and ( max-width: 1000px )
+        position: relative
+        top: auto
+        bottom: auto
+        left: auto
+        width: 100%
+        height: auto
+.two-blocks--sticky
+  .two-blocks__wrapper
+    &:first-child
+      height: 100vh
+      position: absolute
+      top: 0
+      left: 0
+      @media screen and ( max-width: 1000px )
+        position: relative
+        top: auto
+        bottom: auto
+        left: auto
+        width: 100%
+        height: auto
+    &:last-child
+      margin-left: auto
+.two-blocks--sticky.bottom
+  .two-blocks__wrapper
+    &:first-child
+      position: absolute
+      top: auto
+      bottom: 0
+      left: 0
+      z-index: 100
+      @media screen and ( max-width: 1000px )
+        position: relative
+        top: auto
+        bottom: auto
+        left: auto
+        width: 100%
+        height: auto
