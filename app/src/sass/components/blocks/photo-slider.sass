@@ -44,7 +44,7 @@
       left: 0
   &-prev
     left: 0px
-    bottom: -51px
+    bottom: -52px
     &::before
       transform: rotate(180deg)
 .photo-slider.swiper-container-initialized
@@ -53,8 +53,9 @@
 .photo-slider.swiper-container-initialized
   .photo-slider-next
     @media screen and ( max-width: 767px )
-      left: calc(50% + 30px)
+      right: calc(50% - 45px)
+      left: auto
 .photo-slider.swiper-container-initialized
   .photo-slider-prev
     @media screen and ( max-width: 767px )
-      left: calc(50% - 30px)
+      left: calc(50% - 45px)

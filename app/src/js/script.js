@@ -115,6 +115,7 @@ let aboutSlider = new Swiper('.about-slider', {
   slidesPerView: 2,
   spaceBetween: 38,
   centeredSlides: true,
+  autoHeight: true,
   navigation: {
     nextEl: '.about-button-next',
     prevEl: '.about-button-prev',
