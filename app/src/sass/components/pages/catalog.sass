@@ -48,17 +48,6 @@
     overflow: hidden
     position: relative
     height: 100%
-    &::after
-      content: ""
-      width: 100%
-      height: 100%
-      position: absolute
-      top: 0
-      left: 0
-      background-color: $lightGreen
-      opacity: 0
-      transition: all 0.5s
-      z-index: 2
   &:hover
     &::after, &::before
       opacity: 1
@@ -69,7 +58,6 @@
         transition: all 0.5s
     .catalog-item__hover
       opacity: 1
-      transform: scale(1)
       transition: all 0.8s
 
   &__img
@@ -111,31 +99,26 @@
       margin-bottom: 10px
   &__hover
     position: absolute
-    top: 70px
-    right: 120px
+    top: 0px
+    right: 0px
     width: 100%
     height: 100%
     z-index: 3
-    -webkit-clip-path: polygon(100% 0%,100% 100%,0% 50%)
-    clip-path: polygon(100% 0%,100% 100%,0% 50%)
-    width: 567px
-    height: 627px
     opacity: 0
-    transform: scale(0)
     transition: all 0.8s
     img
       width: 100%
       height: 100%
-    @media screen and ( max-width: 1800px )
-      width: 450px
-      height: 497px
-    @media screen and ( max-width: 1560px )
-      width: 428px
-      height: 473px
-      right: 92px
-      top: 50px
-    @media screen and ( max-width: 1300px )
-      width: calc( 100% - 40px )
-      height: calc( 100% - 40px )
-      top: 20px
-      right: 20px
+    // @media screen and ( max-width: 1800px )
+    //   width: 450px
+    //   height: 497px
+    // @media screen and ( max-width: 1560px )
+    //   width: 428px
+    //   height: 473px
+    //   right: 92px
+    //   top: 50px
+    // @media screen and ( max-width: 1300px )
+    //   width: calc( 100% - 40px )
+    //   height: calc( 100% - 40px )
+    //   top: 20px
+    //   right: 20px
