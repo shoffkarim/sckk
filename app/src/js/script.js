@@ -114,7 +114,7 @@ let advantagesSlider = new Swiper('.advantages-slider', {
 let aboutSlider = new Swiper('.about-slider', {
   slidesPerView: 2,
   spaceBetween: 38,
-  centeredSlides: false,
+  centeredSlides: true,
   navigation: {
     nextEl: '.about-button-next',
     prevEl: '.about-button-prev',
@@ -122,7 +122,7 @@ let aboutSlider = new Swiper('.about-slider', {
   loop: true,
   breakpoints: {
     320: {
-      slidesPerView: 1.5,
+      slidesPerView: 2,
     },
     1600: {
       slidesPerView: 2,
