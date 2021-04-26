@@ -691,10 +691,14 @@
         <div class="photo-slider">
           <div class="swiper-wrapper">
             <div class="photo-slider__item swiper-slide">
-              <img src="img/award.jpg" alt="">
+              <a href="img/gallery/gallery-1__big.jpg" class="glightbox " data-gallery="gallery1">
+                <img src="img/award.jpg" alt="">
+              </a>
             </div>
             <div class="photo-slider__item swiper-slide">
-              <img src="img/award.jpg" alt="">
+              <a href="img/award.jpg" class="glightbox " data-gallery="gallery1">
+                <img src="img/award.jpg" alt="">
+              </a>
             </div>
           </div>
           <div class="photo-slider-next"></div>
@@ -1323,8 +1327,17 @@
   </div>
 
 </body>
+<script src="js/glightbox.min.js"></script>
 <script src="js/swiper.min.js"></script>
 <script src="js/imask.js"></script>
+<script>
+  const lightbox = GLightbox({
+    selector: ".glightbox",
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: true
+  });
+</script>
 <script src="js/script.js"></script>
 
 </html>

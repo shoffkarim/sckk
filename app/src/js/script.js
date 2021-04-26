@@ -75,10 +75,44 @@ let catalogSlider = new Swiper('.catalog-slider', {
 });
 
 // eslint-disable-next-line no-unused-vars
+let thumbAdvantagesSlider = new Swiper('.advantages-thumb-slider', {
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  allowTouchMove: false,
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+    },
+    1000: {
+      slidesPerView: 6,
+    }
+  }
+});
+
+// eslint-disable-next-line no-unused-vars
+let advantagesSlider = new Swiper('.advantages-slider', {
+  slidesPerView: 1,
+  thumbs: {
+    swiper: thumbAdvantagesSlider
+  },
+  allowTouchMove: true,
+  autoplay: {
+    delay: 5000,
+  },
+  speed: 600,
+  navigation: {
+    nextEl: '.advantages-button-next',
+    prevEl: '.advantages-button-prev',
+  },
+});
+
+// eslint-disable-next-line no-unused-vars
 let aboutSlider = new Swiper('.about-slider', {
   slidesPerView: 2,
   spaceBetween: 38,
-  centeredSlides: true,
+  centeredSlides: false,
   navigation: {
     nextEl: '.about-button-next',
     prevEl: '.about-button-prev',

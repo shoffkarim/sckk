@@ -1,4 +1,4 @@
-.catalog-slider
+.catalog-slider, .advantages-slider
   height: 100vh
   overflow-x: hidden
   background-color: #00662C
@@ -250,3 +250,26 @@
     transform: rotate(360deg)
   100%
     transform: rotate(0deg)
+
+.advantages-thumb-slider
+  max-width: 1067px
+  margin: 0 auto 0 auto
+  padding-right: 80px
+  position: absolute
+  bottom: 0px
+  width: 100%
+  left: 0
+  right: 0
+  @media screen and ( max-width: 1760px )
+    max-width: 100%
+    width: 100%
+    padding-right: 120px
+    padding-left: 40px
+    margin-right: 0px
+    margin-left: 0px
+  @media screen and ( max-width: 1200px )
+    display: none
+.advantages-button-next, .advantages-button-prev
+  display: none
+  @media screen and ( max-width: 1200px )
+    display: block
