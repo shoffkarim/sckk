@@ -31,7 +31,7 @@ class Validation {
               break;
             case "text":
               // eslint-disable-next-line no-case-declarations
-              let regText = new RegExp(/^[а-яА-ЯёЁ]/);
+              let regText = new RegExp(/^[а-яА-ЯёЁ0-9]/);
               if (!regText.test(value)) {
                 j.classList.add("error");
                 j.classList.remove("good");
