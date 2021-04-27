@@ -19,7 +19,7 @@
     transition: all 0.8s
     .popup-container
       opacity: 1
-      transition: all 1.2s 0.7s
+      transition: all 0.8s 0.5s
   &-container
     background-color: #fff
     position: absolute
@@ -125,6 +125,8 @@
     right: 20px
     width: 30px
     height: 30px
+    opacity: 1
+    transition: all 0.4s
     @media screen and (max-width: 800px)
       display: none
     @media screen and (max-height: 600px)
@@ -158,6 +160,9 @@
         top: 10px
         transform: rotate(-45deg)
         transition: all 0.4s
+    &:hover
+      opacity: 0.5
+      transition: all 0.4s
     &__mobile
       display: none
       @media screen and (max-width: 800px)
@@ -222,6 +227,7 @@
       height: 100%
     .popup-close
       display: block
+
       @media screen and (max-width: 1000px)
         top: 18px
       span
