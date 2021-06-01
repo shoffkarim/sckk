@@ -95,9 +95,11 @@ body
   align-items: center
   justify-content: center
   text-align: center
+  height: 300px
   @media screen and ( max-width: 1560px )
     font-size: 16px
     line-height: 19px
+    height: 252px
   svg
     position: absolute
     top: -13px
@@ -111,7 +113,7 @@ body
       stroke: #fff
       transition: all 0.4s
   span
-    margin-bottom: 67px
+    margin-bottom: 0px
     margin-right: 45px
     position: relative
     z-index: 1
@@ -265,6 +267,8 @@ body
 .page-title
   margin-top: 15px
   margin-bottom: 81px
+  position: relative
+  z-index: 2
   @media screen and ( max-width: 767px )
     padding: 0 15px
   h1
@@ -389,3 +393,6 @@ button
         max-width: none
         padding-left: 120px
         padding-right: 200px
+
+.wiziwig .news-item__date
+  text-align: left

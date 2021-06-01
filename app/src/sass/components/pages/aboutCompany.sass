@@ -331,6 +331,7 @@
   .trinagle-pattern
     width: 100%
     object-fit: none
+    height: auto
     margin-bottom: 19px
     @media screen and ( max-width: 1560px )
       margin-bottom: 33px
@@ -958,6 +959,8 @@
     transition: all 0.4s
 .left-photo
   position: relative
+  overflow: hidden
+  display: flex
   .banner-text
     padding-left: 114px
     padding-bottom: 29px
@@ -967,6 +970,10 @@
       p
         font-size: 60px
         line-height: 60px
+    @media screen and ( max-width: 1200px )
+      position: absolute
+      bottom: 0
+      left: 0
     @media screen and ( max-width: 1000px )
       position: absolute
       bottom: 0px

@@ -84,6 +84,19 @@
         .card-link
           color: rgba(255, 255, 255, 0.5)
           transition: all 0.4s
+      @media screen and ( max-width: 620px )
+        a
+          padding-top: 12px
+          padding-bottom: 12px
+        &:first-child
+          a
+            padding-top: 38px
+            padding-bottom: 12px
+        &:last-child
+          a
+            padding-top: 12px
+            padding-bottom: 38px
+
   &-link
     display: flex
     justify-content: center

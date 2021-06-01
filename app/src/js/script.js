@@ -170,3 +170,10 @@ smoothLinks.forEach((item) => item.addEventListener('click', function (e) {
     block: 'start'
     });
 }));
+
+const lightbox = GLightbox({
+  selector: ".glightbox",
+  touchNavigation: true,
+  loop: true,
+  autoplayVideos: true
+});

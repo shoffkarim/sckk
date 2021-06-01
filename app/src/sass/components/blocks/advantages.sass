@@ -74,7 +74,7 @@
     position: relative
     text-align: center
     transition: all 0.4s
-
+    cursor: pointer
     &::before
       content: ""
       width: 1px
@@ -120,3 +120,9 @@
           display: none
 .advantages-tabs__item:hover + .advantages-tabs__item::before
   display: none
+.advantages-tabs__item.swiper-slide-thumb-active
+  background-color: #007b35
+  -webkit-transition: all .4s
+  transition: all .4s
+  & + .advantages-tabs__item::before
+    display: none

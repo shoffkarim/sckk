@@ -7,7 +7,7 @@ class ScrollAnimation {
   init() {
     if (document.querySelector(".js-sticky") && (document.documentElement.clientWidth > 1000)) {
       const wrap = document.querySelector(".js-sticky");
-      const clientHeight = document.documentElement.clientHeight;
+      let clientHeight = document.body.clientHeight;
       window.addEventListener('scroll', function () {
         classManager(wrap, clientHeight);
       });

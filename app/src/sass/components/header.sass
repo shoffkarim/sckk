@@ -6,10 +6,16 @@
     display: flex
     flex-direction: row
     justify-content: flex-end
+    @media screen and ( max-width: 1670px )
+      padding-right: 120px
     @media screen and ( max-width: 1366px )
       padding-left: 40px
     @media screen and ( max-width: 767px )
       align-items: center
+      padding-right: 40px
+    @media screen and ( max-width: 450px )
+      padding-right: 20px
+      padding-left: 20px
   &-menu
     display: flex
     flex-direction: column
@@ -83,10 +89,11 @@
       top: 37px
       left: -30px
       background-color: $green
-      padding:15px 0px
+      padding: 15px 0px
       opacity: 0
       visibility: hidden
       transition: all 0.4s
+      z-index: 99
       &:hover
         height: auto
         opacity: 1
@@ -141,7 +148,7 @@
         position: relative
         top: auto
         bottom: auto
-        
+
       .background
         fill: none
         stroke: none
